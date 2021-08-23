@@ -1,0 +1,2 @@
+VHDL util_bus_split_v1_00_a c:\edk71\hw\XilinxProcessorIPLib\pcores\util_bus_split_v1_00_a/hdl/vhdl/util_bus_split.vhd
+vhdl work ../hdl/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper.vhd

@@ -1,0 +1,7 @@
+-p
+xc3s100etq144-4
+-lang
+vhdl
+-st
+xst
+system.mhs

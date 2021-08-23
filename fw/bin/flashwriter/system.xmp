@@ -1,0 +1,32 @@
+#Please do not modify this file by hand
+XmpVersion: 7.1
+IntStyle: default
+MHS File: system.mhs
+MSS File: system.mss
+NPL File: projnav/system.ise
+Architecture: spartan3e
+Device: xc3s100e
+Package: tq144
+SpeedGrade: -4
+UseProjNav: 0
+AddToNPL: 0
+PNImportBitFile: projnav/system.bit
+PNImportBmmFile: implementation/system_bd.bmm
+UserCmd1: 
+UserCmd1Type: 0
+UserCmd2: 
+UserCmd2Type: 0
+SynProj: xst
+ReloadPbde: 0
+MainMhsEditor: 0
+InsertNoPads: 0
+HdlLang: VHDL
+Simulator: mti
+SimModel: BEHAVIORAL
+SimXLib: 
+SimEdkLib: 
+MixLangSim: 1
+UcfFile: data/system.ucf
+Processor: microblaze_0
+BootLoop: 1
+XmdStub: 0

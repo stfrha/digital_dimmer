@@ -1,0 +1,6 @@
+FlashFile: C:\shalin\designs\memec_3selc\S3_starter_BSB_20_DWoff_SRAM_nolambda\etc\fast_runtime.opt
+FlashMode: ONESHOT
+ProcInst: microblaze_0
+FlashMem: SRAM_512Kx8_FLASH_2Mx8_c_mem0_baseaddr
+FlashOffset: 0x00000000
+ScratchMem: SRAM_512Kx8_FLASH_2Mx8_c_mem1_baseaddr

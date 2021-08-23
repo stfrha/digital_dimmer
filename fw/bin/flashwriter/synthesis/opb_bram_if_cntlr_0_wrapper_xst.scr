@@ -1,0 +1,11 @@
+run
+-opt_mode speed
+-p xc3s100etq144-4
+-top opb_bram_if_cntlr_0_wrapper
+-ifmt MIXED
+-ifn opb_bram_if_cntlr_0_wrapper_xst.prj
+-ofn ../implementation/opb_bram_if_cntlr_0_wrapper/opb_bram_if_cntlr_0_wrapper.ngc
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-sd {../implementation/opb_bram_if_cntlr_0_wrapper}

@@ -1,0 +1,58 @@
+
+bitinit version Xilinx EDK 7.1.2 Build EDK_H.12.5.1
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+WARNING:MDT - opb_bram_if_cntlr (opb_bram_if_cntlr_0) -
+   C:\temp\rufino\flashwriter\system.mhs:137 - ADDRESS PARAMETER C_BASEADDR has
+   4-bit value. Mpd specifies 32-bit value.
+INFO:MDT - Make sure that addresses specified in binary format have '0b' as
+   prefix, and adresses specified in hexadecimal format have '0x' as prefix. An
+   address value with no prefix is assumed to be a decimal number.
+Sourcing tcl file
+c:/edk71/hw/XilinxProcessorIPLib/pcores/microblaze_v4_00_a/data/microblaze_v2_1_
+0.tcl ...
+Sourcing tcl file
+C:/temp/rufino/flashwriter/pcores/opb_emc_v1_10_b/data/opb_emc_v2_1_0.tcl ...
+
+Overriding IP level properties ...
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:60 - tool overriding c_family value virtex2 to 
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:61 - tool overriding c_instance value microblaze to microblaze_0
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:90 - tcl overriding C_ADDR_TAG_BITS value 17 to 0
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:97 - tcl overriding C_DCACHE_ADDR_TAG value 17 to 0
+opb_mdm (debug_module) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\opb_mdm_v2_00_a\data\opb_mdm_v2_1_0.mpd:
+38 - tool overriding c_family value virtex2 to 
+bram_block (lmb_bram) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_
+0.mpd:39 - tool overriding c_family value virtex2 to 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+c:/edk71/hw/XilinxProcessorIPLib/pcores/emc_common_v2_00_a/data/emc_common_v2_1_
+0.tcl ...
+Address Map for Processor microblaze_0
+  (0x00000000-0x00001fff) opb_bram_if_cntlr_0	mb_opb
+  (0x20400000-0x207fffff) SRAM_512Kx8_FLASH_2Mx8	mb_opb
+  (0x41400000-0x4140ffff) debug_module	mb_opb
+
+Initializing Memory...
+Checking ELFs associated with MICROBLAZE instance microblaze_0 for overlap...
+
+
+Analyzing file bootloops/microblaze_0.elf...
+Running Data2Mem with the following command:
+data2mem -bm implementation/system_bd -bt implementation/system.bit  -bd
+bootloops/microblaze_0.elf tag lmb_bram  -o b implementation/download.bit 
+Memory Initialization completed successfully.
+

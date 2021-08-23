@@ -1,0 +1,138 @@
+Release 7.1.02i - platgen EDK_H.12.5.1
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc3s100etq144-4 -lang vhdl -st xst system.mhs 
+
+Parse system.mhs ...
+
+Read MPD definitions ...
+WARNING:MDT - opb_bram_if_cntlr (opb_bram_if_cntlr_0) -
+   C:\temp\rufino\flashwriter\system.mhs:137 - ADDRESS PARAMETER C_BASEADDR has
+   4-bit value. Mpd specifies 32-bit value.
+INFO:MDT - Make sure that addresses specified in binary format have '0b' as
+   prefix, and adresses specified in hexadecimal format have '0x' as prefix. An
+   address value with no prefix is assumed to be a decimal number.
+Sourcing tcl file
+c:/edk71/hw/XilinxProcessorIPLib/pcores/microblaze_v4_00_a/data/microblaze_v2_1_
+0.tcl ...
+Sourcing tcl file
+C:/temp/rufino/flashwriter/pcores/opb_emc_v1_10_b/data/opb_emc_v2_1_0.tcl ...
+
+Overriding IP level properties ...
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:60 - tool overriding c_family value virtex2 to spartan3e
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:61 - tool overriding c_instance value microblaze to microblaze_0
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:90 - tcl overriding C_ADDR_TAG_BITS value 17 to 0
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:97 - tcl overriding C_DCACHE_ADDR_TAG value 17 to 0
+opb_mdm (debug_module) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\opb_mdm_v2_00_a\data\opb_mdm_v2_1_0.mpd:
+38 - tool overriding c_family value virtex2 to spartan3e
+bram_block (lmb_bram) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_
+0.mpd:39 - tool overriding c_family value virtex2 to spartan3e
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+c:/edk71/hw/XilinxProcessorIPLib/pcores/emc_common_v2_00_a/data/emc_common_v2_1_
+0.tcl ...
+Address Map for Processor microblaze_0
+  (0x00000000-0x00001fff) opb_bram_if_cntlr_0	mb_opb
+  (0x20400000-0x207fffff) SRAM_512Kx8_FLASH_2Mx8	mb_opb
+  (0x41400000-0x4140ffff) debug_module	mb_opb
+
+Check platform configuration ...
+WARNING:MDT - opb_emc (sram_512kx8_flash_2mx8) -
+   C:\temp\rufino\flashwriter\system.mhs:96 - deprecated core!
+opb_v20 (mb_opb) - C:\temp\rufino\flashwriter\system.mhs:51 - 2 master(s) : 3
+slave(s)
+
+Check port drivers...
+
+Check platform address map ...
+
+Overriding system level properties ...
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:63 - tool overriding c_d_lmb value 1 to 0
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:65 - tool overriding c_i_lmb value 1 to 0
+opb_v20 (mb_opb) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd:
+36 - tool overriding c_num_masters value 4 to 2
+opb_v20 (mb_opb) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd:
+37 - tool overriding c_num_slaves value 4 to 3
+bram_block (lmb_bram) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_
+0.mpd:35 - tool overriding c_memsize value 2048 to 8192
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Performing System level DRCs on properties...
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+
+Modify defaults ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+
+Elaborating instances ...
+bram_block (lmb_bram) - C:\temp\rufino\flashwriter\system.mhs:77 - elaborating
+IP
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 3.00 seconds
+
+Constructing platform-level signal connectivity ...
+Completion time: 3.00 seconds
+
+Writing (top-level) BMM ...
+Writing BMM - C:\temp\rufino\flashwriter\implementation\system.bmm
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+INFO:MDT - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized.
+microblaze_0_wrapper (microblaze_0) - C:\temp\rufino\flashwriter\system.mhs:30 -
+Running XST synthesis
+mb_opb_wrapper (mb_opb) - C:\temp\rufino\flashwriter\system.mhs:51 - Running XST
+synthesis
+debug_module_wrapper (debug_module) - C:\temp\rufino\flashwriter\system.mhs:59 -
+Running XST synthesis
+lmb_bram_wrapper (lmb_bram) - C:\temp\rufino\flashwriter\system.mhs:77 - Running
+XST synthesis
+sram_512kx8_flash_2mx8_wrapper (sram_512kx8_flash_2mx8) -
+C:\temp\rufino\flashwriter\system.mhs:96 - Running XST synthesis
+sram_512kx8_flash_2mx8_util_bus_split_0_wrapper
+(sram_512kx8_flash_2mx8_util_bus_split_0) -
+C:\temp\rufino\flashwriter\system.mhs:124 - Running XST synthesis
+opb_bram_if_cntlr_0_wrapper (opb_bram_if_cntlr_0) -
+C:\temp\rufino\flashwriter\system.mhs:134 - Running XST synthesis
+
+Running NGCBUILD ...
+
+Rebuilding cache ...
+Total run time: 181.00 seconds

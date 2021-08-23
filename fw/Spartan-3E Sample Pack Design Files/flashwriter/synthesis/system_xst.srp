@@ -1,0 +1,225 @@
+Release 7.1.02i - xst H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+  5) Advanced HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc3s100etq144-4
+Output File Name                   : "../implementation/system.ngc"
+
+---- Source Options
+Top Module Name                    : system
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+RTL Output                         : YES
+Hierarchy Separator                : /
+
+=========================================================================
+
+WARNING:Xst:29 - Optimization Effort not specified
+The following parameters have been added:
+Optimization Effort                : 1
+
+=========================================================================
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" in Library work.
+Entity <system> compiled.
+Entity <system> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system> (Architecture <STRUCTURE>).
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 976: Generating a Black Box for component <BUFGP>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 982: Generating a Black Box for component <IBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 988: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 994: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1000: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1006: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1012: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1018: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1024: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1030: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1036: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1042: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1048: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1054: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1060: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1066: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1072: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1078: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1084: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1090: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1096: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1102: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1108: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1114: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1120: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1128: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1136: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1144: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1152: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1160: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1168: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1176: Generating a Black Box for component <IOBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1184: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1190: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1196: Generating a Black Box for component <OBUF>.
+WARNING:Xst:766 - "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd" line 1202: Generating a Black Box for component <OBUF>.
+Entity <system> analyzed. Unit <system> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system>.
+    Related source file is "c:/temp/rufino/flashwriter/synthesis/../hdl/system.vhd".
+Unit <system> synthesized.
+
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Advanced RAM inference ...
+Advanced multiplier inference ...
+Advanced Registered AddSub inference ...
+Dynamic shift register inference ...
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '3s100e.nph' in environment c:/xilinx71.
+
+Optimizing unit <system> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ../implementation/system.ngr
+Top Level Output File Name         : ../implementation/system.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 36
+
+Cell Usage :
+# BELS                             : 2
+#      GND                         : 1
+#      VCC                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 35
+#      IBUF                        : 1
+#      IOBUF                       : 8
+#      OBUF                        : 26
+# Others                           : 7
+#      debug_module_wrapper        : 1
+#      lmb_bram_wrapper            : 1
+#      mb_opb_wrapper              : 1
+#      microblaze_0_wrapper        : 1
+#      opb_bram_if_cntlr_0_wrapper : 1
+#      sram_512kx8_flash_2mx8_util_bus_split_0_wrapper: 1
+#      sram_512kx8_flash_2mx8_wrapper: 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100etq144-4 
+
+ Number of bonded IOBs:                 36  out of    108    33%  
+ Number of GCLKs:                        1  out of     24     4%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 7.531ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 749 / 741
+-------------------------------------------------------------------------
+Delay:               7.531ns (Levels of Logic = 1)
+  Source:            sram_512kx8_flash_2mx8:Mem_DQ_O<0> (PAD)
+  Destination:       SRAM_512Kx8_FLASH_2Mx8_Mem_DQ<0> (PAD)
+
+  Data Path: sram_512kx8_flash_2mx8:Mem_DQ_O<0> to SRAM_512Kx8_FLASH_2Mx8_Mem_DQ<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    sram_512kx8_flash_2mx8_wrapper:Mem_DQ_O<0>    1   0.000   0.801  sram_512kx8_flash_2mx8 (SRAM_512Kx8_FLASH_2Mx8_Mem_DQ_int_O<0>)
+     IOBUF:I->IO               6.730          iobuf_24 (SRAM_512Kx8_FLASH_2Mx8_Mem_DQ<0>)
+    ----------------------------------------
+    Total                      7.531ns (6.730ns logic, 0.801ns route)
+                                       (89.4% logic, 10.6% route)
+
+=========================================================================
+CPU : 8.44 / 8.63 s | Elapsed : 8.00 / 9.00 s
+ 
+--> 
+
+Total memory usage is 108024 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   37 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

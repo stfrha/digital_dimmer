@@ -1,0 +1,69 @@
+################################################################################
+##
+## Copyright (c) 2001 Xilinx, Inc.  All rights reserved.
+##
+## Xilinx, Inc.
+##
+## opb_emc.pao
+##
+## Peripheral Analyze Order file
+##
+################################################################################
+
+lib proc_common_v1_00_b proc_common_pkg
+lib proc_common_v1_00_b srl_fifo
+lib proc_common_v1_00_b pselect
+lib proc_common_v1_00_b valid_be
+lib proc_common_v1_00_b ld_arith_reg
+lib proc_common_v1_00_b down_counter
+lib proc_common_v1_00_b inferred_lut4
+lib proc_common_v1_00_b or_muxcy
+lib proc_common_v1_00_b or_gate
+lib proc_common_v1_00_b family
+lib proc_common_v1_00_b mux_onehot
+lib ipif_common_v1_00_a ipif_pkg
+lib ipif_common_v1_00_a interrupt_control
+lib ipif_common_v1_00_a ipif_steer
+lib opb_ipif_v2_00_a address_decoder
+lib opb_ipif_v2_00_a slave_attachment
+lib opb_ipif_v2_00_a pf_counter_bit    
+lib opb_ipif_v2_00_a pf_counter        
+lib opb_ipif_v2_00_a pf_counter_top    
+lib opb_ipif_v2_00_a pf_occ_counter    
+lib opb_ipif_v2_00_a pf_occ_counter_top
+lib opb_ipif_v2_00_a pf_adder_bit      
+lib opb_ipif_v2_00_a pf_adder          
+lib opb_ipif_v2_00_a pf_dpram_select
+lib opb_ipif_v2_00_a srl16_fifo
+lib opb_ipif_v2_00_a pf_dly1_mux
+lib opb_ipif_v2_00_a rdpfifo_dp_cntl
+lib opb_ipif_v2_00_a ipif_control_rd
+lib opb_ipif_v2_00_a rdpfifo_top
+lib opb_ipif_v2_00_a wrpfifo_dp_cntl
+lib opb_ipif_v2_00_a ipif_control_wr
+lib opb_ipif_v2_00_a wrpfifo_top
+lib opb_ipif_v2_00_a bus2ip_amux
+lib opb_ipif_v2_00_a ip2bus_dmux
+lib opb_ipif_v2_00_a ip2bus_dmux_blk
+lib opb_ipif_v2_00_a ip2bus_srmux
+lib opb_ipif_v2_00_a ip2bus_srmux_blk
+lib opb_ipif_v2_00_a ipif_reset
+lib opb_ipif_v2_00_a reset_control
+lib opb_ipif_v2_00_a dma_sg_pkg
+lib opb_ipif_v2_00_a dma_sg_cmp
+lib opb_ipif_v2_00_a ctrl_reg
+lib opb_ipif_v2_00_a dma_sg
+lib opb_ipif_v2_00_a dma_sg_sim
+lib opb_ipif_v2_00_a addr_load_and_incr
+lib opb_ipif_v2_00_a mst_module
+lib opb_ipif_v2_00_a master_attachment
+lib opb_ipif_v2_00_a ipif
+lib opb_ipif_v2_00_a opb_ipif
+lib emc_common_v1_10_b io_registers
+lib emc_common_v1_10_b wait_states
+lib emc_common_v1_10_b mem_state_machine
+lib emc_common_v1_10_b select_param
+lib emc_common_v1_10_b addr_counter_mux
+lib emc_common_v1_10_b data_path
+lib emc_common_v1_10_b emc
+lib opb_emc_v1_10_b opb_emc

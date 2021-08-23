@@ -1,0 +1,47 @@
+# ------------------------------------------------------------------------------------------
+#
+# Legal notice:    All rights strictly reserved. Reproduction or issue to third parties in
+#                  any form whatever is not permitted without written authority from the
+#                  proprietors.
+#
+# ------------------------------------------------------------------------------------------
+#
+# File name:       $Id: $
+#
+# Classification:
+# FHL:             Company confidential (intern)
+# SekrL:           Unclassified
+#
+# Coding rules:    N/A.
+#
+# Description:     Xilinx user constraints file for the digital_dimmer FPGA
+#
+# Known errors:    None
+#
+# To do:           Uncomment pins when the functionality is there behind them in the design,
+#                  and check the IOSTANDARD for them.
+#
+#                  Also see TODO comments in code, if any.
+#
+# ------------------------------------------------------------------------------------------
+# Revision history:
+#
+# $Log: $
+#
+#
+NET clk           LOC=P122 | IOSTANDARD=LVTTL;
+NET reset         LOC=P17  | IOSTANDARD=LVTTL; # J1:4
+NET triac(0)      LOC=P14  | IOSTANDARD=LVTTL; # J1:1
+NET triac(1)      LOC=P15  | IOSTANDARD=LVTTL; # J1:2
+NET triac(2)      LOC=P16  | IOSTANDARD=LVTTL; # J1:3
+NET ir            LOC=P20  | IOSTANDARD=LVTTL; # J2:1
+NET wave_pol      LOC=P21  | IOSTANDARD=LVTTL; # J2:2
+NET led(1)        LOC=P142 | IOSTANDARD=LVTTL;
+NET led(2)        LOC=P43  | IOSTANDARD=LVTTL;
+NET led(3)        LOC=P2   | IOSTANDARD=LVTTL;
+NET led(4)        LOC=P3   | IOSTANDARD=LVTTL;
+NET led(5)        LOC=P4   | IOSTANDARD=LVTTL;
+NET led(6)        LOC=P5   | IOSTANDARD=LVTTL;
+NET led(7)        LOC=P7   | IOSTANDARD=LVTTL;
+
+

@@ -1,0 +1,1 @@
+ -p spartan3e -lang vhdl   -pe microblaze_0  $(MICROBLAZE_0_BOOTLOOP)  -s mti

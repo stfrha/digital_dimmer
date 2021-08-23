@@ -1,0 +1,193 @@
+Release 7.1.02i - xst H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+  5) Advanced HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "sram_512kx8_flash_2mx8_util_bus_split_0_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc3s100etq144-4
+Output File Name                   : "../implementation/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : sram_512kx8_flash_2mx8_util_bus_split_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+RTL Output                         : YES
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper}
+
+=========================================================================
+
+WARNING:Xst:29 - Optimization Effort not specified
+The following parameters have been added:
+Optimization Effort                : 1
+
+=========================================================================
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "c:/edk71/hw/XilinxProcessorIPLib/pcores/util_bus_split_v1_00_a/hdl/vhdl/util_bus_split.vhd" in Library util_bus_split_v1_00_a.
+Entity <util_bus_split> compiled.
+Entity <util_bus_split> (Architecture <IMP>) compiled.
+Compiling vhdl file "C:/temp/rufino/flashwriter/synthesis/../hdl/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper.vhd" in Library work.
+Entity <sram_512kx8_flash_2mx8_util_bus_split_0_wrapper> compiled.
+Entity <sram_512kx8_flash_2mx8_util_bus_split_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <sram_512kx8_flash_2mx8_util_bus_split_0_wrapper> (Architecture <STRUCTURE>).
+    Set user-defined property "X_CORE_INFO =  util_bus_split_v1_00_a" for unit <sram_512kx8_flash_2mx8_util_bus_split_0_wrapper>.
+Instantiating component <util_bus_split> from Library <util_bus_split_v1_00_a>.
+WARNING:Xst:1994 - "C:/temp/rufino/flashwriter/synthesis/../hdl/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper.vhd" line 84: Null range in type of signal <Out2>.
+WARNING:Xst:1541 - "C:/temp/rufino/flashwriter/synthesis/../hdl/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper.vhd" line 41: Different binding for component: <util_bus_split>. Port <Out2> does not match.
+Entity <sram_512kx8_flash_2mx8_util_bus_split_0_wrapper> analyzed. Unit <sram_512kx8_flash_2mx8_util_bus_split_0_wrapper> generated.
+
+Analyzing generic Entity <util_bus_split> (Architecture <imp>).
+	C_SIZE_IN = 32
+	C_LEFT_POS = 10
+	C_SPLIT = 32
+WARNING:Xst:1994 - "c:/edk71/hw/XilinxProcessorIPLib/pcores/util_bus_split_v1_00_a/hdl/vhdl/util_bus_split.vhd" line 84: Null range in type of signal <Out2>.
+WARNING:Xst:1995 - "c:/edk71/hw/XilinxProcessorIPLib/pcores/util_bus_split_v1_00_a/hdl/vhdl/util_bus_split.vhd" line 93: Use of null array on signal <Out2> is not supported.
+Entity <util_bus_split> analyzed. Unit <util_bus_split> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <util_bus_split>.
+    Related source file is "c:/edk71/hw/XilinxProcessorIPLib/pcores/util_bus_split_v1_00_a/hdl/vhdl/util_bus_split.vhd".
+WARNING:Xst:647 - Input <Sig<0:9>> is never used.
+WARNING:Xst:1305 - Output <Out2> is never assigned. Tied to value 00.
+Unit <util_bus_split> synthesized.
+
+
+Synthesizing Unit <sram_512kx8_flash_2mx8_util_bus_split_0_wrapper>.
+    Related source file is "C:/temp/rufino/flashwriter/synthesis/../hdl/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper.vhd".
+Unit <sram_512kx8_flash_2mx8_util_bus_split_0_wrapper> synthesized.
+
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Advanced RAM inference ...
+Advanced multiplier inference ...
+Advanced Registered AddSub inference ...
+Dynamic shift register inference ...
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '3s100e.nph' in environment c:/xilinx71.
+
+Optimizing unit <sram_512kx8_flash_2mx8_util_bus_split_0_wrapper> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ../implementation/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper.ngr
+Top Level Output File Name         : ../implementation/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 56
+
+Cell Usage :
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100etq144-4 
+
+ Number of bonded IOBs:                 56  out of    108    51%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 0.000ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Delay:               0.000ns (Levels of Logic = 0)
+  Source:            Sig<10> (PAD)
+  Destination:       Out1<10> (PAD)
+
+  Data Path: Sig<10> to Out1<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    ----------------------------------------
+    Total                      0.000ns (0.000ns logic, 0.000ns route)
+
+=========================================================================
+CPU : 6.68 / 6.89 s | Elapsed : 6.00 / 6.00 s
+ 
+--> 
+
+Total memory usage is 108024 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

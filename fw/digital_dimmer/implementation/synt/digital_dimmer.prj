@@ -1,0 +1,110 @@
+# ------------------------------------------------------------------------------------------
+#
+# Legal notice:   All rights strictly reserved. Reproduction or issue to third parties in
+#                 any form whatever is not permitted without written authority from the
+#                 proprietors.
+#
+# ------------------------------------------------------------------------------------------
+#
+# File name:      $Id: vmx.prj,v 1.1 2007/04/19 15:45:03 frha Exp $
+#
+# Classification:
+# FHL:            Company confidential (intern)
+# SekrL:          Unclassified
+#
+# Coding rules:   N/A
+#
+# Description:    This Tcl script will synthesise the input vhdl code and constraints
+#
+#                  ¤ Input files to this script are '*.prj', '*.vhd', and '*.sdc'.
+#                    '*.prj' needs to be located in the same directory as the Tcl script.
+#                    '*.vhd' and '*.sdc' files are placed in the source directory
+#                    specified in the '*.prj' file.
+#
+#                  ¤ In the system path enviroment variable, the path to the synplify
+#                    directory is needed in order to run synplify_pro.exe.
+#
+#                  ¤ In the '*.prj' file the result file should point to the synt run
+#                    directory as follows 'project -result_file "./synt_run/cpx.edf"'.
+#
+# Known errors:   None
+#
+# To do:          See TODO comments in code, if any.
+#
+# ------------------------------------------------------------------------------------------
+#
+# Revision history:
+#
+# $Log: vmx.prj,v $
+# Revision 1.1  2007/04/19 15:45:03  frha
+# First check in of vp vmx.
+#
+
+#add_file options, libs and source files
+#
+
+# Below was in VMX, should it be used now?
+#add_file -vhdl -lib work "$LIB/xilinx/virtex2.vhd"
+
+# Packages which are needed for digital_dimmer
+
+add_file -vhdl -lib work "../../source/clock.vhd"
+add_file -vhdl -lib work "../../source/ir_decoder.vhd"
+add_file -vhdl -lib work "../../source/zero_detect.vhd"
+add_file -vhdl -lib work "../../source/controller.vhd"
+add_file -vhdl -lib work "../../source/sequencer.vhd"
+add_file -vhdl -lib work "../../source/pw_modulator.vhd"
+add_file -vhdl -lib work "../../source/dimmer_channel.vhd"
+
+# Top Level
+add_file -vhdl -lib work "../../source/digital_dimmer.vhd"
+
+# the constraint file for the synthesis project
+add_file -constraint "digital_dimmer.sdc"
+
+#implementation: "synt_run"
+impl -add synt_run -type fpga
+
+#device options
+set_option -technology SPARTAN3E
+set_option -part XC3S100E
+set_option -package TQ144
+set_option -speed_grade -4
+
+#compilation/mapping options
+set_option -default_enum_encoding default
+set_option -symbolic_fsm_compiler 0
+set_option -resource_sharing 1
+set_option -use_fsm_explorer 0
+set_option -top_module "work.digital_dimmer"
+
+#map options
+set_option -frequency 25.000
+set_option -fanout_limit 10000
+set_option -disable_io_insertion 0
+set_option -pipe 0
+set_option -update_models_cp 0
+set_option -verification_mode 0
+set_option -retiming 0
+
+#simulation options
+set_option -write_verilog 0
+set_option -write_vhdl 1
+
+#VIF options
+set_option -write_vif 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "synt_run/digital_dimmer.edf"
+
+#
+#implementation attributes
+set_option -vlog_std v2001
+set_option -synthesis_onoff_pragma 0
+set_option -project_relative_includes 1
+set_option -compiler_compatible ""
+impl -active "XilinxM1"
+

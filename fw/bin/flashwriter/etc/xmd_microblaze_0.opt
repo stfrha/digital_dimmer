@@ -1,0 +1,1 @@
+connect mb mdm -cable type xilinx_parallel port LPT1  -debugdevice cpunr 1

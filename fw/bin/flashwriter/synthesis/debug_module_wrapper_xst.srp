@@ -1,0 +1,402 @@
+Release 7.1.02i - xst H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+  5) Advanced HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "debug_module_wrapper_xst.prj"
+
+---- Target Parameters
+Target Device                      : xc3s100etq144-4
+Output File Name                   : "../implementation/debug_module_wrapper/debug_module_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : debug_module_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+RTL Output                         : YES
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation/debug_module_wrapper}
+
+=========================================================================
+
+WARNING:Xst:29 - Optimization Effort not specified
+The following parameters have been added:
+Optimization Effort                : 1
+
+=========================================================================
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/srl_fifo.vhd" in Library opb_mdm_v2_00_a.
+Entity <SRL_FIFO> compiled.
+Entity <SRL_FIFO> (Architecture <IMP>) compiled.
+Compiling vhdl file "c:/edk71/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_c/hdl/vhdl/pselect.vhd" in Library proc_common_v1_00_c.
+Entity <pselect> compiled.
+Entity <pselect> (Architecture <imp>) compiled.
+Compiling vhdl file "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/jtag_control.vhd" in Library opb_mdm_v2_00_a.
+Entity <JTAG_CONTROL> compiled.
+Entity <JTAG_CONTROL> (Architecture <IMP>) compiled.
+Compiling vhdl file "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/bscan_virtex.vhd" in Library opb_mdm_v2_00_a.
+Entity <BSCAN_VIRTEX> compiled.
+Entity <BSCAN_VIRTEX> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/mdm_core.vhd" in Library opb_mdm_v2_00_a.
+Entity <MDM_Core> compiled.
+Entity <MDM_Core> (Architecture <IMP>) compiled.
+Compiling vhdl file "c:/edk71/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_c/hdl/vhdl/family.vhd" in Library proc_common_v1_00_c.
+Package <family> compiled.
+Package body <family> compiled.
+Compiling vhdl file "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/mdm.vhd" in Library opb_mdm_v2_00_a.
+Entity <OPB_MDM> compiled.
+Entity <OPB_MDM> (Architecture <IMP>) compiled.
+Compiling vhdl file "C:/temp/rufino/flashwriter/synthesis/../hdl/debug_module_wrapper.vhd" in Library work.
+Entity <debug_module_wrapper> compiled.
+Entity <debug_module_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <debug_module_wrapper> (Architecture <STRUCTURE>).
+    Set user-defined property "X_CORE_INFO =  opb_mdm_v2_00_a" for unit <debug_module_wrapper>.
+Instantiating component <opb_mdm> from Library <opb_mdm_v2_00_a>.
+Entity <debug_module_wrapper> analyzed. Unit <debug_module_wrapper> generated.
+
+Analyzing generic Entity <opb_mdm> (Architecture <imp>).
+	C_BASEADDR = <u>01000001010000000000000000000000
+	C_HIGHADDR = <u>01000001010000001111111111111111
+	C_OPB_DWIDTH = 32
+	C_OPB_AWIDTH = 32
+	C_FAMILY = "spartan3e"
+	C_MB_DBG_PORTS = 1
+	C_USE_UART = 1
+	C_UART_WIDTH = 8
+	C_WRITE_FSL_PORTS = 0
+    Set user-defined property "PERIOD =  80" for signal <drck_i>.
+WARNING:Xst:753 - "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/mdm.vhd" line 511: Unconnected output port 'jtag_clk' of component 'MDM_Core'.
+WARNING:Xst:753 - "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/mdm.vhd" line 511: Unconnected output port 'trig' of component 'MDM_Core'.
+WARNING:Xst:753 - "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/mdm.vhd" line 511: Unconnected output port 'data' of component 'MDM_Core'.
+Entity <opb_mdm> analyzed. Unit <opb_mdm> generated.
+
+Analyzing generic Entity <MDM_Core> (Architecture <imp>).
+	C_BASEADDR = <u>01000001010000000000000000000000
+	C_HIGHADDR = <u>01000001010000001111111111111111
+	C_MB_DBG_PORTS = 1
+	C_USE_UART = 1
+	C_UART_WIDTH = 8
+	C_USE_FSL = 0
+	C_FSL_DATA_SIZE = 32
+Instantiating component <pselect> from Library <proc_common_v1_00_c>.
+Entity <MDM_Core> analyzed. Unit <MDM_Core> generated.
+
+Analyzing generic Entity <pselect> (Architecture <imp>).
+	C_AB = 16
+	C_AW = 32
+	C_BAR = <u>01000001010000000000000000000000
+WARNING:Xst:766 - "c:/edk71/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_c/hdl/vhdl/pselect.vhd" line 195: Generating a Black Box for component <MUXCY>.
+WARNING:Xst:766 - "c:/edk71/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_c/hdl/vhdl/pselect.vhd" line 195: Generating a Black Box for component <MUXCY>.
+WARNING:Xst:766 - "c:/edk71/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_c/hdl/vhdl/pselect.vhd" line 195: Generating a Black Box for component <MUXCY>.
+WARNING:Xst:766 - "c:/edk71/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_c/hdl/vhdl/pselect.vhd" line 195: Generating a Black Box for component <MUXCY>.
+Entity <pselect> analyzed. Unit <pselect> generated.
+
+Analyzing generic Entity <JTAG_CONTROL> (Architecture <imp>).
+	C_MB_DBG_PORTS = 1
+	C_USE_UART = 1
+	C_UART_WIDTH = 8
+	C_USE_FSL = 0
+	C_FSL_DATA_SIZE = 32
+	C_EN_WIDTH = 1
+WARNING:Xst:2185 - "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/jtag_control.vhd" line 498: Possible simulation mismatch on property <INIT> of instance <SRL16E_1> set by attribute.
+    Set user-defined property "INIT =  0103" for instance <SRL16E_1> in unit <JTAG_CONTROL>.
+WARNING:Xst:2185 - "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/jtag_control.vhd" line 514: Possible simulation mismatch on property <INIT> of instance <SRL16E_2> set by attribute.
+    Set user-defined property "INIT =  4227" for instance <SRL16E_2> in unit <JTAG_CONTROL>.
+Entity <JTAG_CONTROL> analyzed. Unit <JTAG_CONTROL> generated.
+
+Analyzing generic Entity <SRL_FIFO> (Architecture <imp>).
+	C_DATA_BITS = 8
+	C_DEPTH = 16
+Entity <SRL_FIFO> analyzed. Unit <SRL_FIFO> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SRL_FIFO>.
+    Related source file is "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/srl_fifo.vhd".
+    Found 1-bit xor2 for signal <$n0007> created at line 201.
+    Found 1-bit xor2 for signal <$n0008> created at line 201.
+    Found 1-bit xor2 for signal <$n0009> created at line 201.
+    Found 1-bit xor2 for signal <$n0010> created at line 201.
+    Found 1-bit register for signal <data_Exists_I>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <SRL_FIFO> synthesized.
+
+
+Synthesizing Unit <JTAG_CONTROL>.
+    Related source file is "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/jtag_control.vhd".
+WARNING:Xst:647 - Input <FSL0_S_Control> is never used.
+WARNING:Xst:647 - Input <RESET> is never used.
+WARNING:Xst:647 - Input <FSL0_S_Data> is never used.
+WARNING:Xst:647 - Input <OPB_Rst> is never used.
+WARNING:Xst:646 - Signal <fifo_Din<31>> is assigned but never used.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0019>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0020>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0021>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0022>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0024>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0025>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0026>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0027>.
+    Found 1-bit register for signal <Debug_Rst_i>.
+    Found 1-bit register for signal <Debug_SYS_Rst_i>.
+    Found 1-bit register for signal <execute>.
+    Found 1-bit register for signal <execute_1>.
+    Found 1-bit register for signal <execute_2>.
+    Found 1-bit register for signal <Ext_NM_BRK_i>.
+    Found 8-bit register for signal <fifo_Din<0:7>>.
+    Found 1-bit register for signal <fifo_Read>.
+    Found 1-bit register for signal <fifo_Write>.
+    Found 1-bit register for signal <set_Ext_BRK>.
+    Found 5-bit up counter for signal <shift_Count>.
+    Found 1-bit register for signal <tdi_reg>.
+    Found 8-bit register for signal <tdo_reg>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <JTAG_CONTROL> synthesized.
+
+
+Synthesizing Unit <pselect>.
+    Related source file is "c:/edk71/hw/XilinxProcessorIPLib/pcores/proc_common_v1_00_c/hdl/vhdl/pselect.vhd".
+WARNING:Xst:647 - Input <A<16:31>> is never used.
+WARNING:Xst:1780 - Signal <lut_out<4>> is never used or assigned.
+Unit <pselect> synthesized.
+
+
+Synthesizing Unit <MDM_Core>.
+    Related source file is "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/mdm_core.vhd".
+WARNING:Xst:647 - Input <OPB_BE> is never used.
+WARNING:Xst:647 - Input <OPB_DBus<0:23>> is never used.
+WARNING:Xst:647 - Input <OPB_seqAddr> is never used.
+WARNING:Xst:646 - Signal <Dbg_TDO_I<1:7>> is assigned but never used.
+    Found 1-bit register for signal <clear_Ext_BRK>.
+    Found 1-bit register for signal <enable_interrupts>.
+    Found 1-bit register for signal <mdm_CS_2>.
+    Found 1-bit register for signal <mdm_CS_3>.
+    Found 1-bit register for signal <opb_RNW_1>.
+    Found 1-bit register for signal <reset_RX_FIFO>.
+    Found 1-bit register for signal <reset_TX_FIFO>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+Unit <MDM_Core> synthesized.
+
+
+Synthesizing Unit <opb_mdm>.
+    Related source file is "c:/edk71/hw/XilinxProcessorIPLib/pcores/opb_mdm_v2_00_a/hdl/vhdl/mdm.vhd".
+Unit <opb_mdm> synthesized.
+
+
+Synthesizing Unit <debug_module_wrapper>.
+    Related source file is "C:/temp/rufino/flashwriter/synthesis/../hdl/debug_module_wrapper.vhd".
+Unit <debug_module_wrapper> synthesized.
+
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Advanced RAM inference ...
+Advanced multiplier inference ...
+Advanced Registered AddSub inference ...
+Dynamic shift register inference ...
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                         : 1
+ 5-bit up counter                  : 1
+# Registers                        : 35
+ 1-bit register                    : 35
+# Multiplexers                     : 8
+ 1-bit 4-to-1 multiplexer          : 8
+# Xors                             : 8
+ 1-bit xor2                        : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '3s100e.nph' in environment c:/xilinx71.
+
+Optimizing unit <debug_module_wrapper> ...
+
+Optimizing unit <JTAG_CONTROL> ...
+
+Optimizing unit <MDM_Core> ...
+
+Optimizing unit <pselect> ...
+
+Optimizing unit <SRL_FIFO> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ../implementation/debug_module_wrapper/debug_module_wrapper.ngr
+Top Level Output File Name         : ../implementation/debug_module_wrapper/debug_module_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 274
+
+Macro Statistics :
+# Registers                        : 36
+#      1-bit register              : 35
+#      5-bit register              : 1
+# Multiplexers                     : 8
+#      1-bit 4-to-1 multiplexer    : 8
+
+Cell Usage :
+# BELS                             : 124
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1_L                      : 1
+#      LUT2                        : 8
+#      LUT2_D                      : 1
+#      LUT2_L                      : 2
+#      LUT3                        : 21
+#      LUT3_D                      : 1
+#      LUT3_L                      : 6
+#      LUT4                        : 45
+#      LUT4_L                      : 13
+#      MUXCY                       : 4
+#      MUXCY_L                     : 6
+#      MUXF5                       : 2
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 79
+#      FD                          : 3
+#      FDC                         : 7
+#      FDCE                        : 2
+#      FDE                         : 23
+#      FDP                         : 2
+#      FDR                         : 13
+#      FDRE                        : 28
+#      FDRSE                       : 1
+# Shifters                         : 18
+#      SRL16E                      : 18
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# Others                           : 1
+#      BSCAN_VIRTEX                : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100etq144-4 
+
+ Number of Slices:                      72  out of    960     7%  
+ Number of Slice Flip Flops:            79  out of   1920     4%  
+ Number of 4 input LUTs:               116  out of   1920     6%  
+ Number of bonded IOBs:                274  out of    108   253% (*) 
+ Number of GCLKs:                        2  out of     24     8%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+debug_module/BSCAN_VIRTEX_I:DRCK2  | BUFG                   | 44    |
+OPB_Clk                            | NONE                   | 52    |
+debug_module/BSCAN_VIRTEX_I:UPDATE | NONE                   | 1     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.663ns (Maximum Frequency: 115.440MHz)
+   Minimum input arrival time before clock: 7.122ns
+   Maximum output required time after clock: 8.960ns
+   Maximum combinational path delay: 3.021ns
+
+=========================================================================
+Timing constraint: NET debug_module/drck_i PERIOD = -2147483648 pS HIGH -1073741824 pS
+  Clock period: 5.276ns (frequency: 189.538MHz)
+  Total number of paths / destination ports: 153 / 71
+  Number of failed paths / ports: 153 (100.00%) / 71 (100.00%)
+-------------------------------------------------------------------------
+Slack:                  -2147489.000ns
+  Source:               debug_module/MDM_Core_I1/JTAG_CONTROL_I/Command_FDE2 (FF)
+  Destination:          debug_module/MDM_Core_I1/JTAG_CONTROL_I/tdo_reg_1 (FF)
+  Data Path Delay:      5.276ns (Levels of Logic = 3)
+  Source Clock:         debug_module/BSCAN_VIRTEX_I:DRCK2 rising at 0.000ns
+  Destination Clock:    debug_module/BSCAN_VIRTEX_I:DRCK2 rising at 0.000ns
+
+  Data Path: debug_module/MDM_Core_I1/JTAG_CONTROL_I/Command_FDE2 (FF) to debug_module/MDM_Core_I1/JTAG_CONTROL_I/tdo_reg_1 (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              9   0.455   1.254  debug_module/MDM_Core_I1/JTAG_CONTROL_I/Command_FDE2 (debug_module/MDM_Core_I1/trig<4>)
+     LUT2_D:I1->O          6   0.778   1.133  debug_module/MDM_Core_I1/JTAG_CONTROL_I/Ker0_SW0 (N80)
+     LUT4_L:I1->LO         1   0.778   0.000  debug_module/MDM_Core_I1/JTAG_CONTROL_I/_n00201_F (N179)
+     MUXF5:I0->O           1   0.447   0.000  debug_module/MDM_Core_I1/JTAG_CONTROL_I/_n00201 (debug_module/MDM_Core_I1/JTAG_CONTROL_I/_n0020)
+     FDE:D                     0.418          debug_module/MDM_Core_I1/JTAG_CONTROL_I/tdo_reg_1
+    ----------------------------------------
+    Total                      5.276ns (2.889ns logic, 2.387ns route)
+                                       (54.8% logic, 45.2% route)
+
+=========================================================================
+CPU : 10.48 / 10.65 s | Elapsed : 10.00 / 10.00 s
+ 
+--> 
+
+Total memory usage is 111096 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   22 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

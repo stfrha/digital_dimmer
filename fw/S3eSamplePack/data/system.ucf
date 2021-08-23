@@ -1,0 +1,48 @@
+Net      Mem_A<0>          LOC      = P98    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<1>          LOC      = P97    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<2>          LOC      = P96    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<3>          LOC      = P94    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<4>          LOC      = P93    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<5>          LOC      = P92    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<6>          LOC      = P91    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<7>          LOC      = P88    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<8>          LOC      = P87    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<9>          LOC      = P86    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<10>         LOC      = P85    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<11>         LOC      = P82    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<12>         LOC      = P81    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<13>         LOC      = P77    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<14>         LOC      = P76    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<15>         LOC      = P75    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<16>         LOC      = P74    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<17>         LOC      = P70    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<18>         LOC      = P68    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<19>         LOC      = P67    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<20>         LOC      = P44    |    IOSTANDARD  =LVCMOS33;
+Net      Mem_A<21>         LOC      = P83    |    IOSTANDARD  =LVCMOS33;
+                            
+Net      Mem_DQ<0>         LOC      = P63    |    IOSTANDARD  =LVCMOS33 | PULLUP ;
+Net      Mem_DQ<1>         LOC      = P59    |    IOSTANDARD  =LVCMOS33 | PULLUP ;
+Net      Mem_DQ<2>         LOC      = P58    |    IOSTANDARD  =LVCMOS33 | PULLUP ;
+Net      Mem_DQ<3>         LOC      = P54    |    IOSTANDARD  =LVCMOS33 | PULLUP ;
+Net      Mem_DQ<4>         LOC      = P53    |    IOSTANDARD  =LVCMOS33 | PULLUP ;
+Net      Mem_DQ<5>         LOC      = P52    |    IOSTANDARD  =LVCMOS33 | PULLUP ;
+Net      Mem_DQ<6>         LOC      = P51    |    IOSTANDARD  =LVCMOS33 | PULLUP ;
+Net      Mem_DQ<7>         LOC      = P50    |    IOSTANDARD  =LVCMOS33 | PULLUP ;
+
+Net      Mem_WEN           LOC      = P103   |    IOSTANDARD  =LVCMOS33;
+Net      Mem_BEN           LOC      = P106   |    IOSTANDARD  =LVCMOS33;
+Net      Mem_OEN           LOC      = P105   |    IOSTANDARD  =LVCMOS33;
+Net      Mem_CEN           LOC      = P104   |    IOSTANDARD  =LVCMOS33;
+
+
+
+NET led<0> LOC = p142 |    IOSTANDARD  =LVCMOS33;
+NET led<1> LOC = p43  |    IOSTANDARD  =LVCMOS33;
+NET led<2> LOC = p2   |    IOSTANDARD  =LVCMOS33;
+NET led<3> LOC = p3   |    IOSTANDARD  =LVCMOS33;
+NET led<4> LOC = p4   |    IOSTANDARD  =LVCMOS33;
+NET led<5> LOC = p5   |    IOSTANDARD  =LVCMOS33;
+NET led<6> LOC = p7   |    IOSTANDARD  =LVCMOS33;
+
+

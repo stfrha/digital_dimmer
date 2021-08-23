@@ -1,0 +1,25 @@
+# Pin assignment for DispCtl
+# Connected to Pegasus (on board)
+#NET "clk" LOC = "p77";
+#NET "led<0>" LOC = "p45";
+#NET "led<1>" LOC = "p44";
+#NET "led<2>" LOC = "p43";
+#NET "led<3>" LOC = "p42";
+#NET "led<4>" LOC = "p41";
+#NET "led<5>" LOC = "p37";
+#NET "led<6>" LOC = "p36";
+#NET "btn" LOC = "p59";
+
+# Pin assignment for Dice LEDs
+# Connected to S3E (on board)
+#NET "clk" LOC = "p56";
+NET "clk" LOC = "p122";
+NET "led<0>" LOC = "p142";
+NET "led<1>" LOC = "p43";
+NET "led<2>" LOC = "p2";
+NET "led<3>" LOC = "p3";
+NET "led<4>" LOC = "p4";
+NET "led<5>" LOC = "p5";
+NET "led<6>" LOC = "p7";
+NET "btn" LOC = "p18";
+

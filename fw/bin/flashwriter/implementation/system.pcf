@@ -1,0 +1,1930 @@
+//! **************************************************************************
+// Written by: Map H.42 on Fri Nov 04 16:43:16 2005
+//! **************************************************************************
+
+SCHEMATIC START;
+NET "microblaze_0/microblaze_0/pc_Write" USELOWSKEWLINES;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<10>" LOCATE = SITE "P83" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<11>" LOCATE = SITE "P44" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<20>" LOCATE = SITE "P82" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<12>" LOCATE = SITE "P67" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<21>" LOCATE = SITE "P85" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<13>" LOCATE = SITE "P68" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<30>" LOCATE = SITE "P97" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<22>" LOCATE = SITE "P86" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<14>" LOCATE = SITE "P70" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<31>" LOCATE = SITE "P98" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<23>" LOCATE = SITE "P87" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<15>" LOCATE = SITE "P74" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<24>" LOCATE = SITE "P88" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<16>" LOCATE = SITE "P75" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<25>" LOCATE = SITE "P91" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<17>" LOCATE = SITE "P76" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<26>" LOCATE = SITE "P92" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<18>" LOCATE = SITE "P77" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<27>" LOCATE = SITE "P93" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<19>" LOCATE = SITE "P81" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<28>" LOCATE = SITE "P94" LEVEL 1;
+COMP "sys_clk_pin" LOCATE = SITE "P122" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_A<29>" LOCATE = SITE "P96" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_DQ<0>" LOCATE = SITE "P50" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_DQ<1>" LOCATE = SITE "P51" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_DQ<2>" LOCATE = SITE "P52" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_DQ<3>" LOCATE = SITE "P53" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_DQ<4>" LOCATE = SITE "P54" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_DQ<5>" LOCATE = SITE "P58" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_DQ<6>" LOCATE = SITE "P59" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_DQ<7>" LOCATE = SITE "P63" LEVEL 1;
+COMP "sys_rst_pin" LOCATE = SITE "P18" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_BEN" LOCATE = SITE "P106" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_CEN<0>" LOCATE = SITE "P104" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_OEN" LOCATE = SITE "P105" LEVEL 1;
+COMP "SRAM_512Kx8_FLASH_2Mx8_Mem_WEN" LOCATE = SITE "P103" LEVEL 1;
+NET "bufgp_0/IBUFG" BEL "bufgp_0/BUFG.GCLKMUX" USELOCALCONNECT;
+PIN lmb_bram/lmb_bram/ramb16_s9_s9_3.A_pins<53> = BEL
+        "lmb_bram/lmb_bram/ramb16_s9_s9_3.A" PINNAME CLKA;
+PIN lmb_bram/lmb_bram/ramb16_s9_s9_2.A_pins<53> = BEL
+        "lmb_bram/lmb_bram/ramb16_s9_s9_2.A" PINNAME CLKA;
+PIN lmb_bram/lmb_bram/ramb16_s9_s9_1.A_pins<53> = BEL
+        "lmb_bram/lmb_bram/ramb16_s9_s9_1.A" PINNAME CLKA;
+PIN lmb_bram/lmb_bram/ramb16_s9_s9_0.A_pins<53> = BEL
+        "lmb_bram/lmb_bram/ramb16_s9_s9_0.A" PINNAME CLKA;
+TIMEGRP sys_clk_pin = PIN "lmb_bram/lmb_bram/ramb16_s9_s9_3.A_pins<53>" PIN
+        "lmb_bram/lmb_bram/ramb16_s9_s9_2.A_pins<53>" PIN
+        "lmb_bram/lmb_bram/ramb16_s9_s9_1.A_pins<53>" PIN
+        "lmb_bram/lmb_bram/ramb16_s9_s9_0.A_pins<53>" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I1" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I0" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/FDS_I3" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/of_valid_FDR_I"
+        BEL "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I25"
+        BEL "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I26"
+        BEL "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I27"
+        BEL "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I28"
+        BEL "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I29"
+        BEL "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I30"
+        BEL "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I31"
+        BEL "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/FDS_I1" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/FDS_I2" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I24" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I23" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I2" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I3" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I4" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I5" BEL
+        "microblaze_0/microblaze_0/Decode_I/Reg_Test_Equal_N_FDRE" BEL
+        "microblaze_0/microblaze_0/Decode_I/Use_Reg_Neg_S_FDRE" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I6" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I7" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I8" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I9" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I10" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I11" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I12" BEL
+        "microblaze_0/microblaze_0/Decode_I/Force_Val2_FDRSE" BEL
+        "microblaze_0/microblaze_0/Decode_I/ALU_OP1_FDRSE" BEL
+        "microblaze_0/microblaze_0/Decode_I/Force1_FDRE" BEL
+        "microblaze_0/microblaze_0/Decode_I/write_Addr_I_2" BEL
+        "microblaze_0/microblaze_0/Decode_I/write_Addr_I_4" BEL
+        "microblaze_0/microblaze_0/Decode_I/write_Addr_I_3" BEL
+        "microblaze_0/microblaze_0/Decode_I/Force_Val1_FDRE" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I13" BEL
+        "microblaze_0/microblaze_0/Decode_I/Ext_NM_BRK_FDRSE" BEL
+        "microblaze_0/microblaze_0/Decode_I/Reg_Test_Equal_FDSE" BEL
+        "microblaze_0/microblaze_0/Decode_I/Logic_Oper_1" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I14" BEL
+        "microblaze_0/microblaze_0/Decode_I/Result_Sel_1" BEL
+        "microblaze_0/microblaze_0/Decode_I/Use_Reg_Neg_DI_FDRE" BEL
+        "microblaze_0/microblaze_0/Decode_I/Shift_Oper_1" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I15" BEL
+        "microblaze_0/microblaze_0/Decode_I/Force2_FDRE" BEL
+        "microblaze_0/microblaze_0/Decode_I/ALU_OP0_FDRSE" BEL
+        "microblaze_0/microblaze_0/Decode_I/write_Addr_I_1" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I16" BEL
+        "microblaze_0/microblaze_0/Decode_I/write_Carry_I_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I17" BEL
+        "microblaze_0/microblaze_0/Decode_I/writing_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/Select_Logic_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/Sext8_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/take_NM_Break_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I18" BEL
+        "microblaze_0/microblaze_0/Decode_I/take_Break_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/doublet_i_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/doublet_Read_i_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/Unsigned_Op" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I21" BEL
+        "microblaze_0/microblaze_0/Decode_I/mul_Executing_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/iFetch_In_Progress_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/mtsmsr_write_i_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/jump2_I_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/Carry_In" BEL
+        "microblaze_0/microblaze_0/Decode_I/missed_IFetch_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/set_BIP_I_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/write_Reg_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/using_Imm_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/Shift_Carry_In" BEL
+        "microblaze_0/microblaze_0/Decode_I/enable_Interrupts_I_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/reset_BIP_I_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/ex_Valid_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/Shift_Oper_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/d_AS_I" BEL
+        "microblaze_0/microblaze_0/Decode_I/load_Store_i_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/Compare_Instr" BEL
+        "microblaze_0/microblaze_0/Decode_I/write_Addr_I_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/select_ALU_Carry_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/Result_Sel_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/quadlet_Read_i_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/nonvalid_IFetch_n" BEL
+        "microblaze_0/microblaze_0/Decode_I/break_Pipe_i_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/Sign_Extend_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/inHibit_EX_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/Logic_Oper_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I22" BEL
+        "microblaze_0/microblaze_0/Decode_I/Sext16_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/byte_i_0" BEL
+        "microblaze_0/microblaze_0/Decode_I/Valid_Instr" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I20" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF12" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF11" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF10" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF9" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF8" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF7" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF6" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF5" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF4" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF3" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF2" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF1" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF0" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF13" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF14" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF28" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF15" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF29" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF16" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF17" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF18" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF19" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF20" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF30" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF21" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF22" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF23" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF24" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF25" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF31" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF26" BEL
+        "microblaze_0/microblaze_0/Byte_Doublet_Handle_I/M_DBus_DFF27" BEL
+        "microblaze_0/microblaze_0/Debug_I/continue_from_brk" BEL
+        "microblaze_0/microblaze_0/Debug_I/read_register_PC_1" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_29" BEL
+        "microblaze_0/microblaze_0/Debug_I/Debug_Ready_i" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_28" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_32" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_27" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_31" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_26" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_30" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_25" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_24" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_19" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_23" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_18" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_22" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_17" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_21" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_16" BEL
+        "microblaze_0/microblaze_0/Debug_I/Stop_Instr_Fetch_FDRSE" BEL
+        "microblaze_0/microblaze_0/Debug_I/Dbg_Inhibit_EX_FDRSE" BEL
+        "microblaze_0/microblaze_0/Debug_I/Stop_CPU_FDRSE" BEL
+        "microblaze_0/microblaze_0/Debug_I/pc_hit_0" BEL
+        "microblaze_0/microblaze_0/Debug_I/Command_Reg_Rst" BEL
+        "microblaze_0/microblaze_0/Debug_I/dbg_stop_i" BEL
+        "microblaze_0/microblaze_0/Debug_I/prev_10" BEL
+        "microblaze_0/microblaze_0/Debug_I/Want_to_Stop" BEL
+        "microblaze_0/microblaze_0/Debug_I/prev_11_0" BEL
+        "microblaze_0/microblaze_0/Debug_I/Instr_Insert_Reg_En_Clk" BEL
+        "microblaze_0/microblaze_0/Debug_I/read_register_MSR" BEL
+        "microblaze_0/microblaze_0/Debug_I/single_Step_N" BEL
+        "microblaze_0/microblaze_0/Debug_I/prev0" BEL
+        "microblaze_0/microblaze_0/Debug_I/read_register_MSR_1" BEL
+        "microblaze_0/microblaze_0/Debug_I/prev1_0" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_0" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_1" BEL
+        "microblaze_0/microblaze_0/Debug_I/start_single_step" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_2" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_3" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_4" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_5" BEL
+        "microblaze_0/microblaze_0/Debug_I/single_step_count_1" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_6" BEL
+        "microblaze_0/microblaze_0/Debug_I/delay_slot_instr_i" BEL
+        "microblaze_0/microblaze_0/Debug_I/read_register_PC" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_7" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_8" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_9" BEL
+        "microblaze_0/microblaze_0/Debug_I/Start_Dbg_Exec" BEL
+        "microblaze_0/microblaze_0/Debug_I/prev" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_10" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_11" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_12" BEL
+        "microblaze_0/microblaze_0/Debug_I/Full_32_bit" BEL
+        "microblaze_0/microblaze_0/Debug_I/Full_32_bit_1" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_13" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_14" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_15" BEL
+        "microblaze_0/microblaze_0/Debug_I/data_rd_reg_20" BEL
+        "microblaze_0/microblaze_0/Debug_I/New_Dbg_Instr2_CLK" BEL
+        "microblaze_0/microblaze_0/Debug_I/prev_1" BEL
+        "microblaze_0/microblaze_0/Debug_I/prev_11_1" BEL
+        "microblaze_0/microblaze_0/Debug_I/prev1_1" BEL
+        "microblaze_0/microblaze_0/Debug_I/single_step_count_0" BEL
+        "microblaze_0/microblaze_0/Debug_I/New_Dbg_Instr_CLK" BEL
+        "microblaze_0/microblaze_0/Decode_I/PreFetch_Buffer_I/SRL16E_I19" BEL
+        "microblaze_0/microblaze_0/reset_i_0" BEL
+        "microblaze_0/microblaze_0/reg_Write_dbg_S" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I0" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I1" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I2" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I3" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I4" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I5" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I6" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I7" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I8" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I9" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I10" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I11" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I12" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I13" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I14" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I15" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I16" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I17" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I18" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I19" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I20" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I21" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I22" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I23" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I24" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I25" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I26" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I27" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I28" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I29" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I30" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/ABus_FF_I31" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/iOPB_MGrant_d_I" BEL
+        "microblaze_0/microblaze_0/Iopb_Interface_I/IM_select_I" BEL
+        "microblaze_0/microblaze_0/Dopb_Interface_I/stop_request_I" BEL
+        "microblaze_0/microblaze_0/Dopb_Interface_I/dOPB_MGrant_d_I" BEL
+        "microblaze_0/microblaze_0/Dopb_Interface_I/DM_select_I" BEL
+        "microblaze_0/microblaze_0/Dopb_Interface_I/DM_busLock" BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I0/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I0/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I0/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I1/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I1/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I1/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I2/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I2/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I2/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I3/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I3/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I3/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I15/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I15/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I15/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I14/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I14/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I14/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I4/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I4/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I4/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I13/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I13/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I13/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I5/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I5/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I5/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I12/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I12/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I12/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I11/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I11/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I11/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I10/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I10/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I10/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I6/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I6/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I6/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I7/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I7/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I7/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I9/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I9/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I9/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I8/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I8/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I8/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I31/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I31/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I31/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I30/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I30/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I30/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I29/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I29/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I29/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I28/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I28/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I28/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I27/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I27/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I27/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I26/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I26/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I26/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I25/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I25/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I25/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I24/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I24/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I24/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I23/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I23/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I23/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I22/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I22/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I22/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I21/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I21/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I21/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I20/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I20/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I20/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I19/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I19/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I19/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I18/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I18/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I18/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I17/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I17/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I17/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I16/PC_IF_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I16/PC_OF_Buffer"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/PC_Module_I/PC_Bit_I16/PC_EX_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/MSR_Reg_I/MSR_Reg_Bit_I30/MSR_I"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/MSR_Reg_I/MSR_Reg_Bit_I26/MSR_I"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/MSR_Reg_I/MSR_Reg_Bit_I27/MSR_I"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/MSR_Reg_I/MSR_Reg_Bit_I29/MSR_I"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/MSR_Reg_I/MSR_Reg_Bit_I24/MSR_I"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/MSR_Reg_I/MSR_Reg_Bit_I28/MSR_I"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/MSR_Reg_I/MSR_Reg_Bit_I25/MSR_I"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/MSR_Reg_I/MSR_Reg_Bit_I31/MSR_I"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I0/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I12/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I11/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I6/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I7/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I8/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I9/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I25/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I26/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I27/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I1/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I28/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I29/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I30/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I31/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I5/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I4/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I10/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I24/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I23/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I22/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I21/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I20/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I19/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I18/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I17/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I16/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I15/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I2/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I14/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I13/EX_Result_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Result_Mux_I/Result_Mux_Bit_I3/EX_Result_DFF"
+        BEL "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_6"
+        BEL "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_7"
+        BEL "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_8"
+        BEL "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_9"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_10"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_11"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_12"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_13"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_14"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_15"
+        BEL "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_2"
+        BEL "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_4"
+        BEL "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_1"
+        BEL "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_0"
+        BEL "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_3"
+        BEL "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/imm_Reg_5"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I0/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I0/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I0/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I1/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I1/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I1/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I19/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I19/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I19/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I2/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I2/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I2/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I3/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I3/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I3/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I4/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I4/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I4/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I20/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I20/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I20/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I5/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I5/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I5/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I21/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I21/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I21/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I6/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I6/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I6/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I7/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I7/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I7/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I8/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I8/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I8/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I9/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I9/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I9/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I10/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I10/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I10/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I22/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I22/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I22/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I23/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I23/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I23/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I24/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I24/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I24/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I25/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I25/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I25/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I11/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I11/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I11/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I26/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I26/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I26/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I27/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I27/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I27/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I28/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I28/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I28/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I29/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I29/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I29/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I30/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I30/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I30/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I31/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I31/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I31/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I12/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I12/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I12/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I13/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I13/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I13/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I14/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I14/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I14/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I15/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I15/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I15/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I16/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I16/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I16/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I17/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I17/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I17/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I18/Op1_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I18/Op1_Reg_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Operand_Select_I/Operand_Select_Bit_I18/Op2_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I0/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I0/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I0/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I0/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I0/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I0/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I0/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I0/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I1/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I1/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I1/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I1/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I1/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I1/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I1/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I1/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I2/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I2/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I2/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I2/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I2/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I2/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I2/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I2/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I3/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I3/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I3/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I3/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I3/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I3/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I3/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I3/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I4/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I4/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I4/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I4/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I4/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I4/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I4/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I4/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I31/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I31/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I31/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I31/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I31/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I31/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I31/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I31/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I30/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I30/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I30/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I30/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I30/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I30/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I30/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I30/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I29/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I29/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I29/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I29/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I29/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I29/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I29/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I29/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I28/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I28/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I28/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I28/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I28/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I28/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I28/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I28/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I27/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I27/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I27/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I27/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I27/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I27/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I27/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I27/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I26/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I26/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I26/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I26/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I26/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I26/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I26/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I26/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I25/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I25/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I25/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I25/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I25/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I25/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I25/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I25/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I24/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I24/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I24/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I24/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I24/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I24/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I24/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I24/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I23/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I23/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I23/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I23/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I23/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I23/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I23/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I23/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I22/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I22/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I22/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I22/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I22/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I22/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I22/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I22/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I21/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I21/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I21/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I21/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I21/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I21/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I21/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I21/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I20/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I20/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I20/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I20/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I20/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I20/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I20/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I20/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I19/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I19/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I19/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I19/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I19/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I19/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I19/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I19/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I18/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I18/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I18/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I18/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I18/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I18/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I18/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I18/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I17/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I17/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I17/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I17/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I17/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I17/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I17/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I17/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I16/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I16/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I16/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I16/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I16/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I16/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I16/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I16/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I15/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I15/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I15/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I15/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I15/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I15/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I15/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I15/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I14/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I14/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I14/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I14/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I14/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I14/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I14/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I14/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I13/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I13/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I13/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I13/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I13/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I13/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I13/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I13/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I12/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I12/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I12/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I12/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I12/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I12/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I12/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I12/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I11/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I11/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I11/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I11/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I11/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I11/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I11/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I11/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I10/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I10/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I10/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I10/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I10/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I10/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I10/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I10/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I9/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I9/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I9/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I9/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I9/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I9/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I9/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I9/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I8/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I8/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I8/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I8/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I8/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I8/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I8/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I8/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I7/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I7/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I7/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I7/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I7/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I7/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I7/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I7/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I6/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I6/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I6/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I6/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I6/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I6/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I6/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I6/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I5/RAM16x1D_Reg1_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I5/RAM16x1D_Reg1_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I5/RAM16x1D_Reg2_Low.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I5/RAM16x1D_Reg2_Low.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I5/RAM16x1D_Reg1_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I5/RAM16x1D_Reg1_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I5/RAM16x1D_Reg2_High.SLICEM_F"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/Register_File_I/Register_File_Bit_I5/RAM16x1D_Reg2_High.SLICEM_G"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I0/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I1/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I2/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I3/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I4/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I5/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I31/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I30/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I29/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I28/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I27/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I26/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I25/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I24/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I23/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I22/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I21/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I20/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I19/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I18/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I17/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I16/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I15/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I14/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I13/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I12/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I11/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I10/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I9/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I8/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I7/I_ABus_DFF"
+        BEL
+        "microblaze_0/microblaze_0/Data_Flow_I/ALU_I/ALU_Bit_I6/I_ABus_DFF"
+        BEL
+        "mb_opb/mb_opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/PARK_LOCK_I/mgrant_reg_i_0"
+        BEL
+        "mb_opb/mb_opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/PARK_LOCK_I/mgrant_reg_i_1"
+        BEL
+        "mb_opb/mb_opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/ARB_LOGIC_I/arbcycle_cs_0"
+        BEL
+        "mb_opb/mb_opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/PARK_LOCK_I/grant_last_reg_1"
+        BEL
+        "mb_opb/mb_opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/PARK_LOCK_I/grant_last_reg_0"
+        BEL
+        "mb_opb/mb_opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/WATCHDOG_TIMER_I/timeout_cnt_1"
+        BEL
+        "mb_opb/mb_opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/WATCHDOG_TIMER_I/timeout_cnt_2"
+        BEL
+        "mb_opb/mb_opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/WATCHDOG_TIMER_I/timeout_cnt_3"
+        BEL
+        "mb_opb/mb_opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/WATCHDOG_TIMER_I/timeout_cnt_0"
+        BEL
+        "mb_opb/mb_opb/OPB_ARBITER_I/OPB_ARBITER_CORE_I/WATCHDOG_TIMER_I/OPB_timeout"
+        BEL "mb_opb/mb_opb/POR_FF_I" BEL "mb_opb/mb_opb/POR_SRL_I/SRL16E" BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/FDRE_I3"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/SRL16E_I0"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/SRL16E_I1"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/SRL16E_I2"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/SRL16E_I3"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/SRL16E_I4"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/SRL16E_I5"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/SRL16E_I6"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/SRL16E_I7"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/data_Exists_I"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/FDRE_I0"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/FDRE_I1"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/FDRE_I3"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/SRL16E_I0"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/SRL16E_I1"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/SRL16E_I2"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/SRL16E_I3"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/SRL16E_I4"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/SRL16E_I5"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/SRL16E_I6"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/SRL16E_I7"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/data_Exists_I"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/FDRE_I0"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/FDRE_I1"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/Ext_BRK_FDRSE"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/RX_FIFO_I/FDRE_I2"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/TX_FIFO_I/FDRE_I2"
+        BEL "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/execute_1"
+        BEL "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/execute_2"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/Debug_SYS_Rst_i"
+        BEL "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/Debug_Rst_i"
+        BEL "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/fifo_Write"
+        BEL "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/fifo_Read"
+        BEL "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/set_Ext_BRK"
+        BEL
+        "debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/Ext_NM_BRK_i"
+        BEL "debug_module/debug_module/MDM_Core_I1/OPB_rdBus_FDRE25" BEL
+        "debug_module/debug_module/MDM_Core_I1/OPB_rdBus_FDRE24" BEL
+        "debug_module/debug_module/MDM_Core_I1/mdm_CS_1_DFF" BEL
+        "debug_module/debug_module/MDM_Core_I1/mdm_CS_2" BEL
+        "debug_module/debug_module/MDM_Core_I1/OPB_rdBus_FDRE26" BEL
+        "debug_module/debug_module/MDM_Core_I1/OPB_rdBus_FDRE31" BEL
+        "debug_module/debug_module/MDM_Core_I1/reset_RX_FIFO" BEL
+        "debug_module/debug_module/MDM_Core_I1/reset_TX_FIFO" BEL
+        "debug_module/debug_module/MDM_Core_I1/OPB_rdBus_FDRE27" BEL
+        "debug_module/debug_module/MDM_Core_I1/mdm_CS_3" BEL
+        "debug_module/debug_module/MDM_Core_I1/clear_Ext_BRK" BEL
+        "debug_module/debug_module/MDM_Core_I1/enable_interrupts" BEL
+        "debug_module/debug_module/MDM_Core_I1/OPB_rdBus_FDRE28" BEL
+        "debug_module/debug_module/MDM_Core_I1/OPB_rdBus_FDRE29" BEL
+        "debug_module/debug_module/MDM_Core_I1/OPB_rdBus_FDRE30" BEL
+        "debug_module/debug_module/MDM_Core_I1/opb_RNW_1" BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_select_d1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sonb_ctrlsm_cs_FFd1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sonb_ctrlsm_cs_FFd4"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sonb_ctrlsm_cs_FFd3"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_ADDRESS_DECODER/WrCE_Out_i_reg_16"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_ADDRESS_DECODER/CS_Out_i_reg_1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_xferack_i"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_31"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_30"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_29"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_28"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_27"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_26"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_25"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_24"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_23"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_22"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_21"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_20"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_19"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_18"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_17"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_16"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_15"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_14"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_13"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_12"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_11"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_10"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_9"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_8"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_7"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_6"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_ADDRESS_DECODER/WrCE_Out_i_reg_0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_5"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_ADDRESS_DECODER/RdCE_Out_i_reg_16"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_ADDRESS_DECODER/CS_Out_i_reg_0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_4"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_3"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_2"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sonb_ctrlsm_cs_FFd2"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sonb_ctrlsm_cs_FFd5"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_ADDRESS_DECODER/CS_Size_i_reg_1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_31"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_30"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_29"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_28"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_27"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_26"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_25"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_24"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_wrreq_dec"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_rdreq_dec"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_23"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_22"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/count_recover_current_0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/current_State_FFd7"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_19"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_21"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/current_State_FFd9"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/count_wait_current_4"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/Reg_WrAck"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/current_State_FFd4"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_20"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/current_State_FFd2"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_3"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/count_wait_current_3"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/current_State_FFd11"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_18"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/count_recover_current_4"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/count_recover_current_3"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/count_recover_current_2"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/count_recover_current_1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/current_State_FFd6"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/count_wait_current_1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/count_wait_current_2"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/Reg_RdAck"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/Mem_Rdcycle_Done"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_17"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/current_State_FFd8"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/current_State_FFd10"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_16"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_15"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_14"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_13"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_12"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_11"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_10"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_9"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_8"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_7"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_6"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_5"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_4"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_3"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_2"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_abus_d1_1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_31"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_30"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_17"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_18"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_19"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_20"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_21"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_22"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_23"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_24"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_25"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_26"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_27"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_28"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_12"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_11"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_rnw_d1"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_9"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/opb_dbus_d1_0"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_5"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_3"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_4"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_2"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/DATA_PATH_I/RDDATA_BIT0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/DATA_PATH_I/RDDATA_BIT1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/DATA_PATH_I/RDDATA_BIT2"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/DATA_PATH_I/read_ce_0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_dq_o_reg_7"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/DATA_PATH_I/RDDATA_BIT5"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_6"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MCCR_FAST_MODE_I0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/DATA_PATH_I/RDDATA_BIT7"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/DATA_PATH_I/read_ce0_d1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_rst"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MCCR_PAGE_MODE_I0"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_14"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_10"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_7"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_8"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/input_datareg_rst"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Access_Read"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/DATA_PATH_I/RDDATA_BIT3"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/DATA_PATH_I/RDDATA_BIT4"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/DATA_PATH_I/RDDATA_BIT6"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/DATA_PATH_I/RDACK"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_15"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_13"
+        BEL "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/prev_Addr_16"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_27"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_26"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_dq_o_reg_2"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_25"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_dq_o_reg_0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_24"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_23"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_dq_o_reg_3"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_22"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_30"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_21"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_28"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_20"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_26"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_19"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_24"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_18"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_22"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_17"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_20"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_16"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_18"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_15"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_16"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_14"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_14"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_13"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_12"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_12"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_10"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_11"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_10"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_9"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_8"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_7"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_dq_t_reg_7"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_6"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_dq_o_reg_5"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_5"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_RESET_CONTROL/I_RESET_CONTROLLER/sw_reset_state_FFd2"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_4"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_2"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_RESET_CONTROL/I_RESET_CONTROLLER/error_reply"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_oen_reg_d1_0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_oen_reg_0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/MEM_STATE_MACHINE_I/count_wait_current_0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_ADDRESS_DECODER/CS_Size_i_reg_2"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_29"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_wen_reg"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_cen_reg_0"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_31"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_29"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_27"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_25"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_23"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_21"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_19"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_17"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_15"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_13"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_a_reg_11"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_dq_o_reg_4"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_dq_o_reg_6"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_RESET_CONTROL/I_RESET_CONTROLLER/Reg_IP_Reset_RdCE"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_RESET_CONTROL/I_RESET_CONTROLLER/sm_wrack"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_RESET_CONTROL/I_RESET_CONTROLLER/strt_sm_reset"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_SLAVE_ATTACHMENT/sln_dbus_i_28"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_EMC/IO_REGISTERS_I/mem_dq_o_reg_1"
+        BEL
+        "sram_512kx8_flash_2mx8/sram_512kx8_flash_2mx8/I_OPB_IPIf/IPIF_I/I_RESET_CONTROL/I_RESET_CONTROLLER/sw_reset_state_FFd1"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_7"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_8"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_9"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_10"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_11"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_12"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_13"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_14"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_15"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_16"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_17"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_18"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_19"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_20"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_21"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_22"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_23"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_24"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_25"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_26"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_27"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_28"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_29"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_30"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_31"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_xferack_s1_d1"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_4"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_1"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_6"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_5"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_0"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_2"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_dbus_s2_3"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/sln_xferack_s2"
+        BEL
+        "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/I_opb_ipif/OPB_BAM_I/postedwrack_s2"
+        BEL "opb_bram_if_cntlr_0/opb_bram_if_cntlr_0/ip2bus_rdack";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 20 ns HIGH 50%;
+PIN sys_rst_pin_pins<0> = BEL "sys_rst_pin" PINNAME PAD;
+PIN "sys_rst_pin_pins<0>" TIG;
+SCHEMATIC END;

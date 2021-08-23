@@ -1,0 +1,10 @@
+run
+-opt_mode speed
+-p xc3s100etq144-4
+-top system
+-ifmt MIXED
+-ifn system_xst.prj
+-ofn ../implementation/system.ngc
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /

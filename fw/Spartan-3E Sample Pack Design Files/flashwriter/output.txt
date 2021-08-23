@@ -1,0 +1,254 @@
+
+shalins@XSJ-SHALINS1 /cygdrive/c/shalin/designs/spartan3e/s3esp/flashwriter
+$ xmd -tcl flashwriter.tcl
+Xilinx Microprocessor Debug (XMD) Engine
+Xilinx EDK 7.1.2 Build EDK_H.12.5.1
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+Executing user script : flashwriter.tcl
+Flashwriter starting...
+Connecting to target...Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 6.2.2.2. LPT base address = 0378h.
+ ECP base address = 0778h.
+Cable connection established.
+
+JTAG chain configuration
+--------------------------------------------------
+Device   ID Code        IR Length    Part Name
+ 1       01c10093           6        XC3S100E
+Assuming, Device No: 1 contains the MicroBlaze system
+WARNING:Portability:111 - Message file "EDK.msg" wasn't found.
+Connected to the JTAG MicroProcessor Debug Module (MDM)
+No of processors = 1
+
+MicroBlaze Processor 1 Configuration :
+-------------------------------------
+Version............................4.00.a
+No of PC Breakpoints...............1
+No of Read Addr/Data Watchpoints...0
+No of Write Addr/Data Watchpoints..0
+Instruction Cache Support..........off
+Data Cache Support.................off
+Exceptions  Support................off
+FPU  Support.......................off
+FSL DCache Support.................off
+FSL ICache Support.................off
+Hard Divider Support...............off
+Hard Multiplier Support............off
+Barrel Shifter Support.............off
+MSR clr/set Instruction Support....off
+Compare Instruction Support........off
+JTAG MDM Connected to MicroBlaze 1
+Connected to "mb" target. id = 0
+Starting GDB server for "mb" target (id = 0) at TCP port no 1234
+done.
+Opening image file to be programmed...done.
+Setting up Flashwriter sources for compilation --
+Copying flashwriter sources from ./sw_services/flashwriter/src to ./etc/flashwri
+ter/src...done.
+Compiling flashwriter (CFI Query Mode)...done.
+Target reset successfully
+Downloading flashwriter to memory...    section, .text: 0x00000000-0x00001828
+        section, .data: 0x00001828-0x00001a28
+        section, .bss: 0x00001a28-0x00001e38
+Downloaded Program ./etc/flashwriter/flashwriter.elf
+Setting PC with program start addr = 0x00000000
+done.
+./etc/flashwriter/flashwriter.elf :: rcvptr(0x0000183c):    0x00001840
+./etc/flashwriter/flashwriter.elf :: sndptr(0x00001838):    0x00001854
+./etc/flashwriter/flashwriter.elf :: membufptr(0x00001828):    0x00001a28
+./etc/flashwriter/flashwriter.elf :: membufsiz(0x0000182c):    0x00000001
+Setting breakpoint at 0x00000150
+Performing CFI Query on the flash part(s)...Processor started. Type "stop" to st
+op processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% done.
+./etc/flashwriter/flashwriter.elf :: devinfop(0x00001834):    0x00001868
+./etc/flashwriter/flashwriter.elf :: devinfosz(0x00001830):    0x000001c0
+Flash part information:
+Device Algorithm        : Intel/Sharp Extended
+Number of flash parts   : 1
+Mode of each flash part: 8 bits wide
+Size of each flash part : 4 MB
+Flash boot config       : BOTTOM_BOOT_FLASH
+Compiling flashwriter (Block Erase Mode)...done.
+Target reset successfully
+Downloading flashwriter to memory...    section, .text: 0x00000000-0x00000e8c
+        section, .data: 0x00000e90-0x000010a4
+        section, .bss: 0x000010a8-0x000014e8
+Downloaded Program ./etc/flashwriter/flashwriter.elf
+Setting PC with program start addr = 0x00000000
+done.
+./etc/flashwriter/flashwriter.elf :: rcvptr(0x00000ea4):    0x00000ea8
+./etc/flashwriter/flashwriter.elf :: sndptr(0x00000ea0):    0x00000ebc
+./etc/flashwriter/flashwriter.elf :: membufptr(0x00000e90):    0x000010a8
+./etc/flashwriter/flashwriter.elf :: membufsiz(0x00000e94):    0x00000001
+./etc/flashwriter/flashwriter.elf :: devinfop(0x00000e9c):    0x00000ed0
+Setting breakpoint at 0x00000150
+Erasing appropriate flash block(s)...Processor started. Type "stop" to stop proc
+essor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Processor started. Type "stop" to stop processor
+
+RUNNING>
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% done.
+Compiling flashwriter (Program Mode)...done.
+Target reset successfully
+Downloading flashwriter to memory...    section, .text: 0x00000000-0x00000e7c
+        section, .data: 0x00000e80-0x00001094
+        section, .bss: 0x00001098-0x000018d0
+Downloaded Program ./etc/flashwriter/flashwriter.elf
+Setting PC with program start addr = 0x00000000
+done.
+./etc/flashwriter/flashwriter.elf :: rcvptr(0x00000e94):    0x00000e98
+./etc/flashwriter/flashwriter.elf :: sndptr(0x00000e90):    0x00000eac
+./etc/flashwriter/flashwriter.elf :: membufptr(0x00000e80):    0x00001098
+./etc/flashwriter/flashwriter.elf :: membufsiz(0x00000e84):    0x00000400
+./etc/flashwriter/flashwriter.elf :: devinfop(0x00000e8c):    0x00000ec0
+Setting breakpoint at 0x00000150
+Programming of the flash part with the image started.
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:   1.41%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:   2.82%
+Processor started. Type "stop" to stop processor
+.
+.
+.
+
+
+XMD% Progress:  62.00%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  63.41%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  64.82%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  66.23%
+Processor started. Type "stop" to stop processor
+
+XMD% Progress:  80.32%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  81.73%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  83.14%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  84.55%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  85.96%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  87.37%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  88.78%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  90.19%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  91.59%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  93.00%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  94.41%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  95.82%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  97.23%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress:  98.64%
+Processor started. Type "stop" to stop processor
+
+XMD%
+Processor stopped at PC: 0x00000150
+
+XMD% Progress: 100.00%
+
+Programming completed successfully.
+Processor started. Type "stop" to stop processor
+Flashwriter terminating...
+
+shalins@XSJ-SHALINS1 /cygdrive/c/shalin/designs/spartan3e/s3esp/flashwriter
+$

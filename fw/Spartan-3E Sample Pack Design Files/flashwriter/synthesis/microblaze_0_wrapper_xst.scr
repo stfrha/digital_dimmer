@@ -1,0 +1,11 @@
+run
+-opt_mode speed
+-p xc3s100etq144-4
+-top microblaze_0_wrapper
+-ifmt MIXED
+-ifn microblaze_0_wrapper_xst.prj
+-ofn ../implementation/microblaze_0_wrapper/microblaze_0_wrapper.ngc
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-sd {../implementation/microblaze_0_wrapper}

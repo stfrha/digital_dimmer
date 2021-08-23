@@ -1,0 +1,176 @@
+Release 7.1.02i par H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+XSJ-SHALINS1::  Fri Nov 04 16:43:24 2005
+
+par -w -ol std system_map.ncd system.ncd system.pcf 
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '3s100e.nph' in environment
+c:/xilinx71.
+   "system" is an NCD, version 3.1, device xc3s100e, package tq144, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000
+Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "ADVANCED 1.16 2005-08-22".
+
+
+Device Utilization Summary:
+
+   Number of BSCANs                    1 out of 1     100%
+   Number of BUFGMUXs                  2 out of 24      8%
+   Number of External IBUFs            2 out of 108     1%
+      Number of LOCed IBUFs            2 out of 2     100%
+
+   Number of External IOBs            34 out of 80     42%
+      Number of LOCed IOBs            34 out of 34    100%
+
+   Number of RAMB16s                   4 out of 4     100%
+   Number of Slices                  958 out of 960    99%
+      Number of SLICEMs              262 out of 480    54%
+
+
+
+Overall effort level (-ol):   Standard (set by user)
+Placer effort level (-pl):    Standard (set by user)
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard (set by user)
+
+Starting initial Timing Analysis.  REAL time: 15 secs 
+Finished initial Timing Analysis.  REAL time: 15 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:98cfff) REAL time: 17 secs 
+
+Phase 2.31
+Phase 2.31 (Checksum:1312cfe) REAL time: 17 secs 
+
+Phase 3.2
+......
+.................
+
+
+Phase 3.2 (Checksum:98a255) REAL time: 23 secs 
+
+Phase 4.30
+Phase 4.30 (Checksum:26259fc) REAL time: 23 secs 
+
+Phase 5.8
+..................................................................
+...........
+Phase 5.8 (Checksum:c68161) REAL time: 28 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 28 secs 
+
+Phase 7.18
+Phase 7.18 (Checksum:42c1d79) REAL time: 31 secs 
+
+Phase 8.5
+Phase 8.5 (Checksum:4c4b3f8) REAL time: 31 secs 
+
+Writing design to file system.ncd
+
+
+Total REAL time to Placer completion: 33 secs 
+Total CPU time to Placer completion: 28 secs 
+
+Starting Router
+
+Phase 1: 8582 unrouted;       REAL time: 34 secs 
+
+Phase 2: 7659 unrouted;       REAL time: 34 secs 
+
+Phase 3: 3376 unrouted;       REAL time: 37 secs 
+
+Phase 4: 3376 unrouted; (0)      REAL time: 38 secs 
+
+Phase 5: 3376 unrouted; (0)      REAL time: 38 secs 
+
+Phase 6: 3376 unrouted; (0)      REAL time: 38 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 48 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 50 secs 
+
+
+Total REAL time to Router completion: 51 secs 
+Total CPU time to Router completion: 46 secs 
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|      conn1_BRAM_Clk | BUFGMUX_X2Y11| No   |  681 |  0.004     |  0.029      |
++---------------------+--------------+------+------+------------+-------------+
+|           DBG_CLK_s | BUFGMUX_X2Y10| No   |  117 |  0.003     |  0.028      |
++---------------------+--------------+------+------+------------+-------------+
+|debug_module/bscan_u |              |      |      |            |             |
+|               pdate |         Local|      |    1 |  0.000     |  0.916      |
++---------------------+--------------+------+------+------------+-------------+
+
+
+   The Delay Summary Report
+
+
+The NUMBER OF SIGNALS NOT COMPLETELY ROUTED for this design is: 0
+
+   The AVERAGE CONNECTION DELAY for this design is:        1.358
+   The MAXIMUM PIN DELAY IS:                               5.290
+   The AVERAGE CONNECTION DELAY on the 10 WORST NETS is:   4.818
+
+   Listing Pin Delays by value: (nsec)
+
+    d < 1.00   < d < 2.00  < d < 3.00  < d < 4.00  < d < 6.00  d >= 6.00
+   ---------   ---------   ---------   ---------   ---------   ---------
+        3377        3030        1484         425          86           0
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+--------------------------------------------------------------------------------
+  Constraint                                | Requested  | Actual     | Logic 
+                                            |            |            | Levels
+--------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | 20.000ns   | 15.287ns   | 4    
+  pin" 20 ns HIGH 50%                       |            |            |      
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 53 secs 
+Total CPU time to PAR completion: 47 secs 
+
+Peak Memory Usage:  127 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 0
+
+Writing design to file system.ncd
+
+
+
+PAR done!

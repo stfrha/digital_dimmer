@@ -1,0 +1,11 @@
+run
+-opt_mode speed
+-p xc3s100etq144-4
+-top sram_512kx8_flash_2mx8_util_bus_split_0_wrapper
+-ifmt MIXED
+-ifn sram_512kx8_flash_2mx8_util_bus_split_0_wrapper_xst.prj
+-ofn ../implementation/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper.ngc
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-sd {../implementation/sram_512kx8_flash_2mx8_util_bus_split_0_wrapper}

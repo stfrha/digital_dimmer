@@ -1,0 +1,12 @@
+
+NET	"led[6]"    LOC = "P7";
+NET	"led[5]"    LOC = "P5";
+NET	"led[4]"    LOC = "P4";
+NET	"led[3]"    LOC = "P2";
+NET	"led[2]"    LOC = "P43";
+NET	"led[1]"    LOC = "P142";
+NET	"out1"    LOC = "P3";
+
+NET	"mbt"    LOC = "P18";
+
+NET	"clkin"     LOC = "P122";

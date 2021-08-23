@@ -1,0 +1,159 @@
+Release 7.1.02i - libgen Xilinx EDK 7.1.2
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -mhs system.mhs -p xc3s100etq144-4 system.mss 
+
+Output Directory (-od)		: C:\temp\rufino\flashwriter\
+Part (-p)			: spartan3e
+
+Software Specification file	: system.mss
+WARNING:MDT - opb_bram_if_cntlr (opb_bram_if_cntlr_0) -
+   C:\temp\rufino\flashwriter\system.mhs:137 - ADDRESS PARAMETER C_BASEADDR has
+   4-bit value. Mpd specifies 32-bit value.
+INFO:MDT - Make sure that addresses specified in binary format have '0b' as
+   prefix, and adresses specified in hexadecimal format have '0x' as prefix. An
+   address value with no prefix is assumed to be a decimal number.
+Sourcing tcl file
+c:/edk71/hw/XilinxProcessorIPLib/pcores/microblaze_v4_00_a/data/microblaze_v2_1_
+0.tcl ...
+Sourcing tcl file
+C:/temp/rufino/flashwriter/pcores/opb_emc_v1_10_b/data/opb_emc_v2_1_0.tcl ...
+
+Overriding IP level properties ...
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:60 - tool overriding c_family value virtex2 to spartan3e
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:61 - tool overriding c_instance value microblaze to microblaze_0
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:90 - tcl overriding C_ADDR_TAG_BITS value 17 to 0
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:97 - tcl overriding C_DCACHE_ADDR_TAG value 17 to 0
+opb_mdm (debug_module) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\opb_mdm_v2_00_a\data\opb_mdm_v2_1_0.mpd:
+38 - tool overriding c_family value virtex2 to spartan3e
+bram_block (lmb_bram) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_
+0.mpd:39 - tool overriding c_family value virtex2 to spartan3e
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Sourcing tcl file
+c:/edk71/hw/XilinxProcessorIPLib/pcores/emc_common_v2_00_a/data/emc_common_v2_1_
+0.tcl ...
+Address Map for Processor microblaze_0
+  (0x00000000-0x00001fff) opb_bram_if_cntlr_0	mb_opb
+  (0x20400000-0x207fffff) SRAM_512Kx8_FLASH_2Mx8	mb_opb
+  (0x41400000-0x4140ffff) debug_module	mb_opb
+
+Check platform configuration ...
+WARNING:MDT - opb_emc (sram_512kx8_flash_2mx8) -
+   C:\temp\rufino\flashwriter\system.mhs:96 - deprecated core!
+opb_v20 (mb_opb) - C:\temp\rufino\flashwriter\system.mhs:51 - 2 master(s) : 3
+slave(s)
+
+Check port drivers...
+
+Check platform address map ...
+
+Overriding system level properties ...
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:63 - tool overriding c_d_lmb value 1 to 0
+microblaze (microblaze_0) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\microblaze_v4_00_a\data\microblaze_v2_1_
+0.mpd:65 - tool overriding c_i_lmb value 1 to 0
+opb_v20 (mb_opb) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd:
+36 - tool overriding c_num_masters value 4 to 2
+opb_v20 (mb_opb) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\opb_v20_v1_10_c\data\opb_v20_v2_1_0.mpd:
+37 - tool overriding c_num_slaves value 4 to 3
+bram_block (lmb_bram) -
+c:\edk71\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\data\bram_block_v2_1_
+0.mpd:35 - tool overriding c_memsize value 2048 to 8192
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Performing System level DRCs on properties...
+INFO:MDT - List of peripherals addressable from processor instance microblaze_0
+   : 
+  - debug_module
+  - SRAM_512Kx8_FLASH_2Mx8
+WARNING:MDT - C:\temp\rufino\flashwriter\system.mhs:96 - No Driver Found for
+   instance SRAM_512Kx8_FLASH_2Mx8. To avoid seeing this warning, assign the
+   appropriate driver or driver "generic 1.00.a " to instance
+   SRAM_512Kx8_FLASH_2Mx8
+
+  - opb_bram_if_cntlr_0
+WARNING:MDT - C:\temp\rufino\flashwriter\system.mhs:134 - No Driver Found for
+   instance opb_bram_if_cntlr_0. To avoid seeing this warning, assign the
+   appropriate driver or driver "generic 1.00.a " to instance
+   opb_bram_if_cntlr_0
+
+
+Building Directory Structure for microblaze_0
+
+Generating platform libraries and device drivers ...
+
+Running CopyFiles ...
+
+Copying files for os standalone_v1_00_a from
+c:\edk71\sw\lib\bsp\standalone_v1_00_a\src\ to
+C:\temp\rufino\flashwriter\microblaze_0\libsrc\standalone_v1_00_a\ ...
+
+Copying files for driver uartlite_v1_00_b from
+c:\edk71\sw\XilinxProcessorIPLib\drivers\uartlite_v1_00_b\src\ to
+C:\temp\rufino\flashwriter\microblaze_0\libsrc\uartlite_v1_00_b\ ...
+
+Copying files for driver cpu_v1_00_a from
+c:\edk71\sw\XilinxProcessorIPLib\drivers\cpu_v1_00_a\src\ to
+C:\temp\rufino\flashwriter\microblaze_0\libsrc\cpu_v1_00_a\ ...
+
+Running DRCs for OSes, Drivers and Libraries ... 
+
+Running generate for OS'es, Drivers and Libraries ... 
+
+Running post_generate for OS'es, Drivers and Libraries ... 
+
+Running make for Drivers and Libraries ... 
+
+Configuring make for target include using:
+
+make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mxl-soft-mul  -O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+
+Configuring make for target libs using:
+
+make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=-mxl-soft-mul 
+-O2 -c" "EXTRA_COMPILER_FLAGS=-g" 
+Compiling commo
+Compiling  microblaze_disable_dcache.
+Compiling  microblaze_disable_exceptions.
+Compiling  microblaze_disable_icache.
+Compiling  microblaze_disable_interrupts.
+Compiling  microblaze_enable_dcache.
+Compiling  microblaze_enable_exceptions.
+Compiling  microblaze_enable_icache.
+Compiling  microblaze_enable_interrupts.
+Compiling  microblaze_init_dcache_range.
+Compiling  microblaze_init_icache_range.
+Compiling  microblaze_update_dcache.
+Compiling  microblaze_update_icache.
+Compiling  microblaze_exception_handler.
+Compiling  microblaze_exceptions_g.
+Compiling  microblaze_interrupt_handler.
+Compiling  microblaze_interrupts_g.
+Compiling  hw_exception_handler.
+Compiling uartlit
+Compiling cp
+
+Libraries generated in C:\temp\rufino\flashwriter\microblaze_0\lib\ directory
+
+Running execs_generate for OS'es, Drivers and Libraries ... 
+
+LibGen Done. 

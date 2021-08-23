@@ -1,0 +1,12 @@
+# Pin assignment for Demo LEDs
+# Connected to S3E (on board)
+NET "clk" LOC = "p122";
+NET "led<0>" LOC = "p142";
+NET "led<1>" LOC = "p43";
+NET "led<2>" LOC = "p2";
+NET "led<3>" LOC = "p3";
+NET "led<4>" LOC = "p4";
+NET "led<5>" LOC = "p5";
+NET "led<6>" LOC = "p7";
+NET "btn1" LOC = "p18";
+

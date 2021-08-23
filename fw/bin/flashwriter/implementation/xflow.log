@@ -1,0 +1,349 @@
+Release 7.1.02i Xflow H.38
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+xflow.exe -wd implementation -p xc3s100etq144-4 -implement fast_runtime.opt
+system.ngc  
+.... Copying flowfile c:/xilinx71/xilinx/data/fpga.flw into working directory
+C:/temp/rufino/flashwriter/implementation 
+
+Using Flow File: C:/temp/rufino/flashwriter/implementation/fpga.flw 
+Using Option File(s): 
+ C:/temp/rufino/flashwriter/implementation/fast_runtime.opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc3s100etq144-4 -nt timestamp -bm system.bmm
+C:/temp/rufino/flashwriter/implementation/system.ngc -uc system.ucf system.ngd 
+#----------------------------------------------#
+Release 7.1.02i - ngdbuild H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -p xc3s100etq144-4 -nt timestamp -bm system.bmm -uc
+system.ucf C:/temp/rufino/flashwriter/implementation/system.ngc system.ngd 
+
+Reading NGO file 'C:/temp/rufino/flashwriter/implementation/system.ngc' ...
+Loading design module
+"C:/temp/rufino/flashwriter/implementation/microblaze_0_wrapper.ngc"...
+Loading design module
+"C:/temp/rufino/flashwriter/implementation/mb_opb_wrapper.ngc"...
+Loading design module
+"C:/temp/rufino/flashwriter/implementation/debug_module_wrapper.ngc"...
+Loading design module
+"C:/temp/rufino/flashwriter/implementation/lmb_bram_wrapper.ngc"...
+Loading design module
+"C:/temp/rufino/flashwriter/implementation/sram_512kx8_flash_2mx8_wrapper.ngc"..
+.
+Loading design module
+"C:/temp/rufino/flashwriter/implementation/sram_512kx8_flash_2mx8_util_bus_split
+_0_wrapper.ngc"...
+Loading design module
+"C:/temp/rufino/flashwriter/implementation/opb_bram_if_cntlr_0_wrapper.ngc"...
+
+Applying constraints in "system.ucf" to the design...
+
+Checking timing specifications ...
+
+Processing BMM file ...
+
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net
+   'microblaze_0/microblaze_0/Data_Flow_I/word_r1_r2_unalignment' has no driver
+WARNING:NgdBuild:452 - logical net
+   'microblaze_0/microblaze_0/Data_Flow_I/word_r1_imm_unalignment' has no driver
+WARNING:NgdBuild:452 - logical net
+   'microblaze_0/microblaze_0/Data_Flow_I/halfword_unalignment' has no driver
+WARNING:NgdBuild:478 - clock net debug_module/bscan_drck1 with clock driver
+   debug_module/debug_module/BUFG_DRCK1 drives no clock pins
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   4
+
+Writing NGD file "system.ngd" ...
+
+Writing NGDBUILD log file "system.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o system_map.ncd -pr b -ir system.ngd system.pcf 
+#----------------------------------------------#
+Release 7.1.02i - Map H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+Using target part "3s100etq144-4".
+Mapping design into LUTs...
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Running unrelated packing...
+Writing design file "system_map.ncd"...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    3
+Logic Utilization:
+  Number of Slice Flip Flops:         902 out of   1,920   46%
+  Number of 4 input LUTs:           1,360 out of   1,920   70%
+Logic Distribution:
+  Number of occupied Slices:                          958 out of     960   99%
+    Number of Slices containing only related logic:     833 out of     958   86%
+    Number of Slices containing unrelated logic:        125 out of     958   13%
+      *See NOTES below for an explanation of the effects of unrelated logic
+Total Number 4 input LUTs:          1,762 out of   1,920   91%
+  Number used as logic:              1,360
+  Number used as a route-thru:          45
+  Number used for Dual Port RAMs:      256
+    (Two LUTs used per Dual Port RAM)
+  Number used as Shift registers:      101
+  Number of bonded IOBs:               36 out of     108   33%
+    IOB Flip Flops:                    33
+  Number of Block RAMs:                4 out of       4  100%
+  Number of GCLKs:                     2 out of      24    8%
+  Number of BSCANs:                    1 out of       1  100%
+
+Total equivalent gate count for design:  302,082
+Additional JTAG gate count for IOBs:  1,728
+Peak Memory Usage:  131 MB
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol std system_map.ncd system.ncd system.pcf 
+#----------------------------------------------#
+Release 7.1.02i - par H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '3s100e.nph' in environment
+c:/xilinx71.
+   "system" is an NCD, version 3.1, device xc3s100e, package tq144, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000
+Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "ADVANCED 1.16 2005-08-22".
+
+
+Device Utilization Summary:
+
+   Number of BSCANs                    1 out of 1     100%
+   Number of BUFGMUXs                  2 out of 24      8%
+   Number of External IBUFs            2 out of 108     1%
+      Number of LOCed IBUFs            2 out of 2     100%
+
+   Number of External IOBs            34 out of 80     42%
+      Number of LOCed IOBs            34 out of 34    100%
+
+   Number of RAMB16s                   4 out of 4     100%
+   Number of Slices                  958 out of 960    99%
+      Number of SLICEMs              262 out of 480    54%
+
+
+
+Overall effort level (-ol):   Standard (set by user)
+Placer effort level (-pl):    Standard (set by user)
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard (set by user)
+
+Starting initial Timing Analysis.  REAL time: 15 secs 
+Finished initial Timing Analysis.  REAL time: 15 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:98cfff) REAL time: 17 secs 
+
+Phase 2.31
+Phase 2.31 (Checksum:1312cfe) REAL time: 17 secs 
+
+Phase 3.2
+......
+.................
+
+
+Phase 3.2 (Checksum:98a255) REAL time: 23 secs 
+
+Phase 4.30
+Phase 4.30 (Checksum:26259fc) REAL time: 23 secs 
+
+Phase 5.8
+..................................................................
+...........
+Phase 5.8 (Checksum:c68161) REAL time: 28 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 28 secs 
+
+Phase 7.18
+Phase 7.18 (Checksum:42c1d79) REAL time: 31 secs 
+
+Phase 8.5
+Phase 8.5 (Checksum:4c4b3f8) REAL time: 31 secs 
+
+Writing design to file system.ncd
+
+
+Total REAL time to Placer completion: 33 secs 
+Total CPU time to Placer completion: 28 secs 
+
+Starting Router
+
+Phase 1: 8582 unrouted;       REAL time: 34 secs 
+
+Phase 2: 7659 unrouted;       REAL time: 34 secs 
+
+Phase 3: 3376 unrouted;       REAL time: 37 secs 
+
+Phase 4: 3376 unrouted; (0)      REAL time: 38 secs 
+
+Phase 5: 3376 unrouted; (0)      REAL time: 38 secs 
+
+Phase 6: 3376 unrouted; (0)      REAL time: 38 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 48 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 50 secs 
+
+
+Total REAL time to Router completion: 51 secs 
+Total CPU time to Router completion: 46 secs 
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|      conn1_BRAM_Clk | BUFGMUX_X2Y11| No   |  681 |  0.004     |  0.029      |
++---------------------+--------------+------+------+------------+-------------+
+|           DBG_CLK_s | BUFGMUX_X2Y10| No   |  117 |  0.003     |  0.028      |
++---------------------+--------------+------+------+------------+-------------+
+|debug_module/bscan_u |              |      |      |            |             |
+|               pdate |         Local|      |    1 |  0.000     |  0.916      |
++---------------------+--------------+------+------+------------+-------------+
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+--------------------------------------------------------------------------------
+  Constraint                                | Requested  | Actual     | Logic 
+                                            |            |            | Levels
+--------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | 20.000ns   | 15.287ns   | 4    
+  pin" 20 ns HIGH 50%                       |            |            |      
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 53 secs 
+Total CPU time to PAR completion: 47 secs 
+
+Peak Memory Usage:  127 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 0
+
+Writing design to file system.ncd
+
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml system.twx system.ncd system.pcf 
+#----------------------------------------------#
+Release 7.1.02i - Trace H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+
+Loading device for application Rf_Device from file '3s100e.nph' in environment
+c:/xilinx71.
+   "system" is an NCD, version 3.1, device xc3s100e, package tq144, speed -4
+--------------------------------------------------------------------------------
+Release 7.1.02i Trace H.42
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+trce -e 3 -xml system.twx system.ncd system.pcf
+
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc3s100e,-4 (ADVANCED 1.16 2005-08-22)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 105740 paths, 0 nets, and 7436 connections
+
+Design statistics:
+   Minimum period:  15.287ns (Maximum frequency:  65.415MHz)
+
+
+Analysis completed Fri Nov 04 16:44:33 2005
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Number of info messages: 1
+Total time: 12 secs 
+
+

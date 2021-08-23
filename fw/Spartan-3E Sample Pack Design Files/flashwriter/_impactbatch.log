@@ -1,0 +1,37 @@
+iMPACT Version: H.38
+
+iMPACT log file started on Sat Aug 18 14:14:00 2007
+
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+Connecting to cable (USB Port).
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 7.0.0.0. LPT base address = 0378h.
+ ECP base address = 0778h.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 7.0.0.0.Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 7.0.0.0.Cable connection failed.
+Connecting to cable (Parallel Port - LPT4).
+Checking cable driver.
+ Driver windrvr6.sys version = 7.0.0.0.Cable connection failed.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver xusbdfwu.sys version: 1017 (1021).
+ Driver windrvr6.sys version = 7.0.0.0. Max current requested during enumeration is 280 mA.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1021.
+CPLD file version = 0004h.
+CPLD version = 0012h.
+// *** BATCH CMD : identify
+Identifying chain contents ....'1': : Manufacturer's ID =Xilinx xc3s100e, Version : 0
+ERROR:iMPACT:1111 - Can't locate bsdl file xc3s100e.bsd.
+EXCEPTION:iMPACT:BsdlStorage.c:328:1.66.26.1 - File does not exist.
